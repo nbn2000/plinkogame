@@ -16,7 +16,7 @@ const Navbar = () => {
     }, 400);
   };
   return (
-    <nav className="w-full h-[80px] fixed  top-0 left-0  shadow-[0_10px_40px_0_rgba(109,141,173,0.25)]">
+    <nav className="w-full h-[80px] fixed bg-white top-0 left-0  shadow-[0_10px_40px_0_rgba(109,141,173,0.25)]">
       <div className="mx-auto px-4 flex flex-row  justify-between items-center gap-4  max-w-[1400px]">
         <div className="w-max py-5 pr-5">
           <img src={Logo} alt="logo" className="w-full" />

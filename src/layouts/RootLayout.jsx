@@ -1,5 +1,5 @@
 import Navbar from "../components/navbar/Navbar";
-// import Footer from "../components/footer/view/index";
+import Footer from "../components/footer/";
 import { I18nextProvider } from "react-i18next";
 import i18n from "../locales";
 import TopButton from "./TopButton";
@@ -13,7 +13,7 @@ const RootLayout = ({ children }) => {
         <TopButton />
         <Navbar />
         <>{children}</>
-        {/* <Footer /> */}
+        <Footer />
       </I18nextProvider>
     </main>
   );
