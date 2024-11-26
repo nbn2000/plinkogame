@@ -3,9 +3,6 @@ import React from "react";
 export default function Head() {
   return (
     <div className="mt-24 w-full">
-      <h2 className="text-4xl mx-auto w-[lvw] font-roboto font-bold text-[3.157em] leading-[1.1em] bg-[#f1f3f4] my-10 p-10">
-        Plinko Game: The Ultimate Guide to Online Gambling Fun
-      </h2>
       <div>
         <p className="leading-[1.85em] p-[1.5em] font-roboto tracking-wide">
           The game of Plinko has become highly popular in the online gaming
@@ -21,8 +18,8 @@ export default function Head() {
           ⭐Play Plinko for Real Money!⭐
         </button>
         <img
-          src="https://plinkogame.cc/wp-content/uploads/2024/10/unnamed-4-1024x573.jpg"
-          alt="plinko game online casino"
+          src="/images/first.jpg"
+          alt="description of the image"
           className="mx-auto rounded-xl"
         />
         <div>
@@ -47,8 +44,8 @@ export default function Head() {
             thrilling experience every time.
           </p>
           <img
-            src="https://plinkogame.cc/wp-content/uploads/2024/10/unnamed-3.jpg"
-            alt="plinko game online casino"
+            src="/images/second.jpg"
+            alt="description of the image"
             className="mx-auto rounded-xl"
           />
         </div>
