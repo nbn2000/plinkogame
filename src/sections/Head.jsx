@@ -5,7 +5,7 @@ import phone from "../assets/icons/phone.svg";
 
 export default function Head() {
   return (
-    <div className="mt-24 w-full">
+    <div className="mt-24 w-full px-4">
       <p className="leading-[1.85em] p-[1.5em] font-roboto tracking-wide text-[#2E3246]">
         The game of Plinko has become highly popular in the online gaming
         industry, and there are several exciting versions of this classic slot
@@ -15,9 +15,11 @@ export default function Head() {
         By following this guide, you’ll discover how to set specific goals for
         your Plinko sessions and get more out of your gameplay.
       </p>
-      <button className=" bg-[#F136A7] hover:text-[#F136A7] hover:bg-white transition-all mx-auto m-10 rounded-[100px] text-lg text-white px-10 py-6 tracking-wider font-roboto  font-[700] text-[14px] leading-[16px] shadow-[2px_2px_29px_0_#F136A7] ">
-        ⭐ Play Plinko for Real Money! ⭐
-      </button>
+      <div className="flex justify-start items-center">
+        <button className="whitespace-nowrap bg-[#F136A7] hover:text-[#F136A7] hover:bg-white transition-all mx-auto m-10 rounded-[100px] text-lg text-white px-10 py-6 tracking-wider font-roboto  font-[700] text-[14px] leading-[16px] shadow-[2px_2px_29px_0_#F136A7] ">
+          ⭐ Play Plinko for Real Money! ⭐
+        </button>
+      </div>
       <img
         src="/images/first.jpg"
         alt="description of the image"
@@ -36,7 +38,7 @@ export default function Head() {
           />
           What is Plinko?
         </h3>
-        <p className="leading-[1.85em] p-[1.5em] font-roboto tracking-wide text-[#2E3246]">
+        <p className="leading-[1.85em]  font-roboto tracking-wide text-[#2E3246]">
           Plinko has gained popularity since its debut on the TV show “The Price
           is Right.” The concept is simple: a board filled with pegs, at the top
           of which balls or chips are dropped, and winnings are awarded based on
@@ -63,7 +65,7 @@ export default function Head() {
           />
           Plinko: Taking the Classic Game to New Heights
         </h3>
-        <p className="leading-[1.85em] p-[1.5em] font-roboto tracking-wide text-[#2E3246]">
+        <p className="leading-[1.85em]  font-roboto tracking-wide text-[#2E3246]">
           Online versions of Plinko have brought new life to this popular game.
           Various platforms have taken the thrill of the original game and
           enhanced it for gamblers by adding more features and gameplay options.

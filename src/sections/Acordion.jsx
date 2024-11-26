@@ -71,19 +71,19 @@ Use available tools: Utilize platform tools like self-exclusion options or depos
 const InnerSection = ({ title, p, isOpen, onClick }) => {
   return (
     <div
-      className={`w-full rounded-lg bg-primaryLight cursor-pointer transition-all duration-250 ${
+      className={`w-full px-4 rounded-lg bg-primaryLight cursor-pointer transition-all duration-250 ${
         isOpen ? "mb-4" : ""
       }`}
       onClick={onClick}
     >
       <div
-        className={`flex mb-2 w-full items-center bg-[#EDEDED] py-2 px-3 ${
+        className={`flex mb-2 w-full gap-2  items-center bg-[#EDEDED] py-2 px-3 ${
           isOpen
-            ? "rounded-t-[20px]  border-b-[1px] border-solid border-b-[#ccc]"
+            ? "rounded-t-[20px] whitespace-wrap  border-b-[1px] border-solid border-b-[#ccc]"
             : "rounded-[20px]"
-        } justify-between  md:h-14 transition-all`}
+        } justify-between h-max md:h-14 transition-all`}
       >
-        <div className="font-[700] leading-[22.4]">{title}</div>
+        <span className="font-[700] h-min ">{title}</span>
         <button>
           {isOpen ? (
             <img src={MinusIcon} alt="+" />
