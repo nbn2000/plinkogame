@@ -1,6 +1,6 @@
-import MinusIcon from "../assets/icons/minus.svg";
-import PlusIcon from "../assets/icons/plus.svg";
-import pointer from "../assets/icons/hand-pointing-right.svg";
+import MinusIcon from "/src/assets/icons/minus.svg";
+import PlusIcon from "/src/assets/icons/plus.svg";
+import pointer from "/src/assets/icons/hand-pointing-right.svg";
 import { useState } from "react";
 
 const data = [

@@ -1,7 +1,7 @@
-import gamble from "../assets/icons/bingo-777.svg";
-import remote from "../assets/icons/playstation-remote.svg";
-import tick from "../assets/icons/tick.svg";
-import phone from "../assets/icons/phone.svg";
+import gamble from "/src/assets/icons/bingo-777.svg";
+import remote from "/src/assets/icons/playstation-remote.svg";
+import tick from "/src/assets/icons/tick.svg";
+import phone from "/src/assets/icons/phone.svg";
 
 export default function Head() {
   return (

@@ -20,3 +20,4 @@ export { default as Clock } from "./Clock";
 export { default as Sheild } from "./Sheild";
 export { default as People } from "./People";
 export { default as BrokenHome } from "./BrokenHome";
+export { default as Loading } from "./loading";
