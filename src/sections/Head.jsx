@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function Head() {
   return (
     <div className="mt-24 w-full">
@@ -30,11 +28,11 @@ export default function Head() {
             <img
               draggable="false"
               role="img"
-              class="emoji"
+              className="emoji"
               alt="🎰"
               height={30}
               width={30}
-              src="https://s.w.org/images/core/emoji/15.0.3/svg/1f3b0.svg"
+              src="../assets/icons/star.svg"
             />
             What is Plinko?
           </h3>
@@ -57,11 +55,11 @@ export default function Head() {
             <img
               draggable="false"
               role="img"
-              class="emoji"
+              className="emoji"
               alt="🎰"
               height={30}
               width={30}
-              src="https://s.w.org/images/core/emoji/15.0.3/svg/1f3ae.svg"
+              src="../assets/icons/star.svg"
             />
             Plinko: Taking the Classic Game to New Heights
           </h3>
