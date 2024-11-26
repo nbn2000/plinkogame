@@ -1,5 +1,6 @@
 import MinusIcon from "../assets/icons/minus.svg";
 import PlusIcon from "../assets/icons/plus.svg";
+import pointer from "../assets/icons/hand-pointing-right.svg";
 import { useState } from "react";
 
 const data = [
@@ -113,8 +114,11 @@ const Accordion = () => {
 
   return (
     <div className="w-full my-4 flex flex-col items-center gap-21.25 pt-6 pb-18.75 mt-17.5">
-      <h3>Frequently asked questions</h3>
-      <div className="w-full flex flex-col items-center gap-8.75">
+      <h3 className="font-[700] text-[28px] leading-[34px] w-full text-start mb-[10px] flex justify-start items-center gap-2">
+        <img src={pointer} alt="pointer" /> Frequently Asked Questions (FAQ)
+        About Plinko Game
+      </h3>
+      <div className="w-full flex flex-col items-center gap-[20px]">
         {data.map((item, index) => (
           <InnerSection
             key={index}
