@@ -8,6 +8,7 @@ export default {
 
   theme: {
     extend: {
+      roboto: ["Roboto", "sans-serif"],
       keyframes: {
         dropdownOpen: {
           "0%": { opacity: 0, transform: "translateY(-10px)" },
