@@ -1,11 +1,11 @@
-import gift from "../assets/icons/gift.svg";
-import bowling from "../assets/bowling-game.jpg";
-import tick from "../assets/icons/tick.svg";
-import lighning from "../assets/icons/yellow-lightning.svg";
-import gem from "../assets/icons/gem.svg";
-import statistics from "../assets/icons/statistics.svg";
-import settings from "../assets/icons/settings.svg";
-import trofee from "../assets/icons/trofee.svg";
+import gift from "/src/assets/icons/gift.svg";
+import bowling from "/src/assets/bowling-game.jpg";
+import tick from "/src/assets/icons/tick.svg";
+import lighning from "/src/assets/icons/yellow-lightning.svg";
+import gem from "/src/assets/icons/gem.svg";
+import statistics from "/src/assets/icons/statistics.svg";
+import settings from "/src/assets/icons/settings.svg";
+import trofee from "/src/assets/icons/trofee.svg";
 
 const SecondPart = () => {
   return (

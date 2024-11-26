@@ -1,4 +1,4 @@
-import dude from "../assets/beard-dude.webp";
+import dude from "/src/assets/beard-dude.webp";
 
 const LastOne = () => {
   return (

@@ -1,8 +1,8 @@
-import bag from "../assets/icons/cash-of-bag.svg";
-import tick from "../assets/icons/tick.svg";
-import exclaim from "../assets/icons/exclamation-mark.svg";
-import thumbs from "../assets/icons/thumbs-up.svg";
-import anothergamble from "../assets/another-balling-game.png";
+import bag from "/src/assets/icons/cash-of-bag.svg";
+import tick from "/src/assets/icons/tick.svg";
+import exclaim from "/src/assets/icons/exclamation-mark.svg";
+import thumbs from "/src/assets/icons/thumbs-up.svg";
+import anothergamble from "/src/assets/another-balling-game.png";
 
 const ThirdPart = () => {
   return (

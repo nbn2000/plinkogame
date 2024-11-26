@@ -1,20 +1,13 @@
 import "./App.css";
-import RootLayout from "./layouts/RootLayout";
-import LastOne from "./sections/LastOne";
-import Head from "./sections/Head";
-import Accordion from "./sections/Acordion";
-import SecondPart from "./sections/SecondPart";
-import ThirdPart from "./sections/ThirdPart";
+import Router from "./routes";
+import { I18nextProvider } from "react-i18next";
+import i18n from "./locales";
 
 function App() {
   return (
-    <RootLayout>
-      <Head />
-      <SecondPart />
-      <ThirdPart />
-      <Accordion />
-      <LastOne />
-    </RootLayout>
+    <I18nextProvider i18n={i18n}>
+      <Router />
+    </I18nextProvider>
   );
 }
 
