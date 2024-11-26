@@ -13,7 +13,7 @@ const MenuModal = ({ open }) => {
           <img src={Logo} alt="logo" className="w-full" />
         </div>
         <LangugaDropdown isMobile />
-        <button className=" bg-[#F136A7] rounded-[100px] text-white px-5 py-3 font-[700] text-[14px] leading-[16px] shadow-[2px_2px_29px_0_#F136A7]">
+        <button className=" bg-[#F136A7] hover:text-[#F136A7] hover:bg-white transition-all rounded-[100px] text-white px-5 py-3 font-[700] text-[14px] leading-[16px] shadow-[2px_2px_29px_0_#F136A7]">
           Play Now!
         </button>
         <span className="text-[#7f8c8d] text-xs font-[400] leading-[1.45em]">

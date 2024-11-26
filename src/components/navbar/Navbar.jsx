@@ -25,7 +25,7 @@ const Navbar = () => {
           <div className="hidden md:block">
             <LangageDropDown />
           </div>
-          <button className=" bg-[#F136A7] rounded-[100px] text-white px-5 py-3 font-[700] text-[14px] leading-[16px] shadow-[2px_2px_29px_0_#F136A7] hidden md:block">
+          <button className=" bg-[#F136A7] hover:text-[#F136A7] transition-all hover:bg-white rounded-[100px] text-white px-5 py-3 font-[700] text-[14px] leading-[16px] shadow-[2px_2px_29px_0_#F136A7] hidden md:block">
             Play Now!
           </button>
           <div className="relative md:hidden">
