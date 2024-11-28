@@ -19,12 +19,12 @@ const Navbar = () => {
   return (
     <nav className="w-full h-[80px] fixed bg-white top-0 left-0  shadow-[0_10px_40px_0_rgba(109,141,173,0.25)]">
       <div className="mx-auto px-4 flex flex-row  justify-between items-center gap-4  max-w-[1400px]">
-        <button className="bg-[#F136A7] hover:text-[#F136A7] transition-all hover:bg-white rounded-[100px] text-white  p-2 font-[700] text-[14px] leading-[16px] shadow-[2px_2px_29px_0_#F136A7] md:hidden block">
-          Play Now!
-        </button>
-        <Link to={"/"} className="w-max py-5 pr-5">
+        <Link to={"/"} className="w-1/3 md:w-max py-5 pr-5">
           <img src={Logo} alt="logo" className="w-full" />
         </Link>
+        <button className="bg-[#F136A7] -ml-[-6px] hover:text-[#F136A7] transition-all mx-auto hover:bg-white rounded-[100px] text-white  p-2 font-[700] text-[14px] leading-[16px] shadow-[2px_2px_29px_0_#F136A7] md:hidden block">
+          Play Now!
+        </button>
         <div className="flex justify-center items-center gap-3">
           <div className="hidden md:block">
             <LangageDropDown />

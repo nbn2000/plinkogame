@@ -205,7 +205,7 @@ const SecondPart = () => {
       />
       <div>
         <SectionHeader icon={lighning} text="Winning Strategies" />
-        <div className="mx-auto my-10 p-5 w-full md:w-4/5">
+        <div className="mx-auto my-10 p-1 md:p-5 w-full md:w-4/5">
           <p className="leading-[1.85em] mb-4 font-roboto tracking-wide text-[#2E3246]">
             Although Plinko largely depends on luck, there are several
             strategies that can help you enhance your gaming experience and
@@ -216,7 +216,7 @@ const SecondPart = () => {
             {tips.map((tip, index) => (
               <li
                 key={index}
-                className="p-4 border border-gray-300 rounded-lg shadow-md bg-white"
+                className="p-1 md:p-4 border border-gray-300 rounded-lg shadow-md bg-white"
               >
                 <p className="font-bold text-lg text-gray-800">{tip.title}</p>
                 <p className="text-gray-600 mt-2">{tip.desc}</p>
@@ -309,7 +309,7 @@ const SecondPart = () => {
               {gamingTechnology.map((tech, index) => (
                 <li
                   key={index}
-                  className="p-5 border border-green-300 rounded-lg bg-green-50"
+                  className="p-2 md:p-5 border border-green-300 rounded-lg bg-green-50"
                 >
                   <h3 className="font-semibold text-xl text-green-700 mb-3">
                     {tech.title}
@@ -345,10 +345,8 @@ const SecondPart = () => {
           </section>
         </div>
 
-        <p className="text-[#2E3246] mt-[28px]">
-          {t(
-            "These features not only enhance the overall gaming experience but also help build trust between the platform and players."
-          )}
+        <p className="text-[#2E3246] mt-[28px] font-bold text-xl">
+          The casinos we recommend fully meet all these criteria.
         </p>
       </div>
     </div>

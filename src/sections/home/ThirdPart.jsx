@@ -30,7 +30,7 @@ const ThirdPart = () => {
       </div>
       <div>
         <h3 className="flex items-center gap-5 text-xl font-bold text-[28px] leading-[34px] my-5 text-[#151515]">
-          <img src={exclaim} alt="lightning" /> {t("Responsible Gaming")}
+          <img src={exclaim} alt="lightning" /> Responsible Gambling
         </h3>
         <p className="leading-[1.85em] mb-4 font-roboto tracking-wide text-[#2E3246]">
           A responsible approach to gambling means being aware of your actions
@@ -39,34 +39,8 @@ const ThirdPart = () => {
           foremost, entertainment, not a way to earn money. Play wisely and only
           for enjoyment.
         </p>
-        <ul className="*:text-[#2E3246] flex flex-col gap-3">
-          {tipsForSuccess.map((tip, index) => (
-            <ListItem key={index} icon={tick} description={t(tip)} />
-          ))}
-        </ul>
       </div>
-      <p className="text-[#2E3246] mt-[28px]">
-        {t("Always remember: games should be fun, not a means to make money.")}
-      </p>
-      <div>
-        <h3 className="flex items-center gap-5 text-xl font-bold text-[28px] leading-[34px] my-5 text-[#151515]">
-          <img
-            draggable="false"
-            role="img"
-            className="emoji"
-            alt="🎰"
-            height={30}
-            width={30}
-            src={thumbs}
-          />
-          {t("Summary: Is Plinko Right for You?")}
-        </h3>
-        <p className="leading-[1.85em]  font-roboto tracking-wide text-[#2E3246]">
-          {t(
-            "Plinko brings together excitement, chance, and strategy, creating a unique mix of fun and unpredictability. This seemingly simple game can be adjusted to suit different playing styles, providing options to play risk-free or to aim for potentially significant wins, depending on your preferences. With the right approach, players can maximize their enjoyment and make the most out of each session."
-          )}
-        </p>
-      </div>
+
       <div className="flex w-full justify-start items-center">
         <img
           src={anothergamble}
@@ -75,14 +49,6 @@ const ThirdPart = () => {
           className="mx-auto mt-[53px] mb-[40px] rounded-[5px]"
         />
       </div>
-      {desc.map((i, idx) => (
-        <p
-          className="leading-[1.85em] my-4 font-roboto tracking-wide text-[#2E3246]"
-          key={idx}
-        >
-          {t(i)}
-        </p>
-      ))}
     </div>
   );
 };

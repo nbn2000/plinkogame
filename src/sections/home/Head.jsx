@@ -167,7 +167,7 @@ export default function Head() {
       <Table />
 
       <div className="flex justify-center items-center">
-        <button className="bg-[#F136A7] hover:text-[#F136A7] hover:bg-white transition-all m-10 rounded-[100px] text-lg text-white px-10 py-6 tracking-wider font-roboto font-bold text-[14px] shadow-[2px_2px_29px_0_#F136A7]">
+        <button className="bg-[#F136A7] hover:text-[#F136A7] hover:bg-white transition-all m-5 md:m-10 rounded-[100px] md:text-lg text-white px-3 md:px-10 py-4 md:py-6 tracking-wider font-roboto font-bold text-[12px] md:text-[14px] shadow-[2px_2px_29px_0_#F136A7]">
           ⭐ {t("Play Plinko for Real Money!")} ⭐
         </button>
       </div>
