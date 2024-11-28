@@ -3,6 +3,7 @@ import remote from "/src/assets/icons/playstation-remote.svg";
 import tick from "/src/assets/icons/tick.svg";
 import phone from "/src/assets/icons/phone.svg";
 import useLocales from "/src/hooks/useLocales";
+import Table from "./Table";
 
 const ContentBlock = ({ icon, title, children }) => (
   <div className="my-6">
@@ -158,6 +159,7 @@ export default function Head() {
 
   return (
     <div className="mt-[40px] w-full px-4">
+      <Table />
       <p className="leading-[1.85em] font-roboto tracking-wide text-[#2E3246]">
         {t(
           "Plinko has gained immense popularity in the world of online gaming. Various versions of this classic game can be found on many platforms. This comprehensive guide will provide everything you need to know to start playing Plinko, whether you're an experienced player or just beginning your journey into online casinos. With this guide you’ll learn how to set clear goals for your gaming sessions and get the most enjoyment and rewards from this game."
