@@ -51,18 +51,19 @@ const tips = [
 ];
 const plinkoAlternatives = [
   {
-    title: "Multiplier Plinko",
+    title: "Multiplier",
     description:
-      "Specific pockets on the board have multipliers that can boost your winnings.",
+      "Certain slots on the game board are equipped with multipliers that significantly increase your winnings when you land in them.",
   },
   {
-    title: "Progressive Plinko",
-    description: "A version where possible winnings increase with each round.",
+    title: "Progressive",
+    description:
+      "The potential winnings grow with each round, creating additional excitement and motivation to keep playing.",
   },
   {
-    title: "Team Plinko",
+    title: "Team",
     description:
-      "Work together with other players to achieve targets and share in the rewards.",
+      "Play with other players, joining forces to achieve common goals and share the rewards.",
   },
 ];
 
@@ -116,7 +117,61 @@ const ineffectiveMethods = [
   "Telegram bots",
   "Paid predictions",
 ];
+const gamingTechnology = [
+  {
+    title: "Random Number Generators (RNG)",
+    description:
+      "RNG ensure that each ball drop is completely random and unpredictable, guaranteeing the fairness of the game.",
+  },
+  {
+    title: "Provably Fair Systems",
+    description:
+      "Provably Fair Systems use blockchain technology to allow players to verify the results of each game and ensure their transparency.",
+  },
+  {
+    title: "Adaptive Design",
+    description:
+      "Adaptive Design enables you to enjoy Plinko on any device, with different screen sizes and orientations, ensuring convenience and an optimal gaming experience.",
+  },
+];
 
+const reliableCasino = [
+  {
+    title: "Licensing and Regulation",
+    description:
+      "Ensure that the casino has an official license issued by authoritative bodies. This guarantees safety, fairness, and compliance with standards.",
+  },
+  {
+    title: "Reputation and Player Reviews",
+    description:
+      "Research reviews from other users and casino ratings. Reliable platforms have positive recommendations and a well-deserved reputation in the industry.",
+  },
+  {
+    title: "Game Selection",
+    description:
+      "Check if the casino offers a wide variety of games, including Plinko, as well as popular slots, table games, and live casino options. A diverse game selection indicates a high-quality platform.",
+  },
+  {
+    title: "Provably Fair Technology",
+    description:
+      "Some casinos use blockchain technology for provably fair gameplay, allowing players to verify game results and ensure transparency.",
+  },
+  {
+    title: "Payment Methods",
+    description:
+      "Ensure that the casino supports convenient and secure methods for deposits and withdrawals, such as bank cards, e-wallets (Skrill, Neteller), cryptocurrencies, or bank transfers.",
+  },
+  {
+    title: "Withdrawal Speed",
+    description:
+      "Reliable casinos process withdrawal requests quickly, within 24–48 hours, without unnecessary delays or hidden fees.",
+  },
+  {
+    title: "Quality of Customer Support",
+    description:
+      "A trustworthy casino provides round-the-clock support via chat, email, or phone. Test how quickly and professionally they resolve issues.",
+  },
+];
 const SectionHeader = ({ icon, text }) => (
   <h3 className="flex items-center gap-5 text-xl font-bold text-[28px] leading-[34px] my-5 text-[#151515]">
     <img src={icon} alt={text} /> {text}
@@ -156,9 +211,7 @@ const SecondPart = () => {
             strategies that can help you enhance your gaming experience and
             increase your chances of potential winnings:
           </p>
-          <h2 className="text-2xl font-bold text-center mb-5">
-            Plinko Tips & Strategies
-          </h2>
+
           <ul className="space-y-5 ">
             {tips.map((tip, index) => (
               <li
@@ -183,10 +236,8 @@ const SecondPart = () => {
 
       <div>
         <div>
+          <SectionHeader icon={statistics} text="Which Methods DO NOT Work" />
           <div className="mx-auto my-10 p-5 w-full md:w-4/5">
-            <h2 className="text-2xl font-bold text-center mb-5">
-              Ineffective Methods in Plinko
-            </h2>
             <p className="text-gray-600 mb-5">
               There are many online offers promising wins in Plinko, but most of
               them are ineffective. Here’s what definitely won’t help:
@@ -209,42 +260,90 @@ const SecondPart = () => {
               to make money off you.
             </p>
           </div>
-          <SectionHeader
-            icon={gem}
-            text={t("What Makes Plinko So Exciting?")}
-          />
-          <p className="leading-[1.85em]  font-roboto tracking-wide text-[#2E3246]">
-            {t(
-              "The thrill of watching the ball bounce its way down the Plinko board is something every player will enjoy. Every time the ball hits a peg, it creates a new possibility for where it might land, keeping players engaged and excited."
-            )}
-          </p>
-        </div>
-        <div>
-          <SectionHeader icon={statistics} text={t("Plinko Alternatives")} />
-          <p className="leading-[1.85em] mb-4 font-roboto tracking-wide text-[#2E3246]">
-            {t(
-              "In addition to the standard version of Plinko, there are numerous variations you can explore:"
-            )}
-          </p>
-          <ul className="flex flex-col gap-3">
-            {plinkoAlternatives.map((alt, index) => (
-              <ListItem
-                key={index}
-                icon={tick}
-                title={t(alt.title)}
-                description={t(alt.description)}
-              />
-            ))}
-          </ul>
-          <p className="text-[#2E3246] mt-[28px]">
-            {t(
-              "These variations add even more excitement and challenge to the game, offering something new for every player."
-            )}
-          </p>
+
+          <SectionHeader icon={gem} text=" What Makes Plinko So Exciting?" />
+          <div className="mx-auto my-10 p-5 w-full md:w-4/5">
+            <p className="text-gray-600 mb-5">
+              Although this game has ancient roots, its online versions are
+              modern and feel like a brand-new experience for today’s players.
+              From my experience, I can say this game is truly unique and stands
+              out from other slots. Its originality makes it so appealing
+              because we always enjoy trying something new.
+            </p>
+          </div>
+          <SectionHeader icon={statistics} text=" Alternatives to Plinko" />
+          <div className="mx-auto my-10 p-5 w-full md:w-4/5">
+            <p className="text-gray-600 mb-5">
+              In addition to the classic version of Plinko, there are many
+              exciting features worth trying:
+            </p>
+            <ul className="space-y-5">
+              {plinkoAlternatives.map((alternative, index) => (
+                <li
+                  key={index}
+                  className="p-5 border border-blue-300 rounded-lg bg-blue-50"
+                >
+                  <h3 className="font-semibold text-xl text-blue-700 mb-3">
+                    {alternative.title}
+                  </h3>
+                  <p className="text-gray-700">{alternative.description}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
       <div>
-        <SectionHeader icon={settings} text={t("Game Technology")} />
+        <SectionHeader
+          icon={settings}
+          text={t("Gaming Technology and Safety")}
+        />
+        <div className="mx-auto my-10 p-5 w-full md:w-4/5">
+          {/* Gaming Technology and Safety Section */}
+          <section className="mb-10">
+            <p className="text-gray-600 mb-5">
+              Online platforms launch advanced technologies to ensure fairness,
+              transparency, and a comfortable gaming experience:
+            </p>
+            <ul className="space-y-5">
+              {gamingTechnology.map((tech, index) => (
+                <li
+                  key={index}
+                  className="p-5 border border-green-300 rounded-lg bg-green-50"
+                >
+                  <h3 className="font-semibold text-xl text-green-700 mb-3">
+                    {tech.title}
+                  </h3>
+                  <p className="text-gray-700">{tech.description}</p>
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          <SectionHeader
+            icon={trophy}
+            text={t("How to Choose a Reliable Online Casino for Playing")}
+          />
+          <section>
+            <p className="text-gray-600 mb-5">
+              The casinos we recommend fully meet all these criteria:
+            </p>
+            <ul className="space-y-5">
+              {reliableCasino.map((casino, index) => (
+                <li
+                  key={index}
+                  className="p-5 border border-blue-300 rounded-lg bg-blue-50"
+                >
+                  <h3 className="font-semibold text-xl text-blue-700 mb-3">
+                    {casino.title}
+                  </h3>
+                  <p className="text-gray-700">{casino.description}</p>
+                </li>
+              ))}
+            </ul>
+          </section>
+        </div>
+
         <p className="leading-[1.85em] mb-4 font-roboto tracking-wide text-[#2E3246]">
           {t(
             "Online platforms use advanced technology to ensure a fair and enjoyable Plinko experience:"
@@ -268,10 +367,6 @@ const SecondPart = () => {
       </div>
 
       <div>
-        <SectionHeader
-          icon={trophy}
-          text={t("Why Choose Online Casino Platforms for Playing Plinko?")}
-        />
         <p className="leading-[1.85em] mb-4 font-roboto tracking-wide text-[#2E3246]">
           {t(
             "Compared to other online Plinko casinos, many platforms offer additional benefits:"
