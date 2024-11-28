@@ -138,71 +138,77 @@ const SecondPart = () => {
           </p>
         </div>
         <div>
-          <SectionHeader icon={statistics} text="Plinko Alternatives" />
+          <SectionHeader icon={statistics} text={t("Plinko Alternatives")} />
           <p className="leading-[1.85em] mb-4 font-roboto tracking-wide text-[#2E3246]">
-            In addition to the standard version of Plinko, there are numerous
-            variations you can explore:
+            {t(
+              "In addition to the standard version of Plinko, there are numerous variations you can explore:"
+            )}
           </p>
           <ul className="flex flex-col gap-3">
             {plinkoAlternatives.map((alt, index) => (
               <ListItem
                 key={index}
                 icon={tick}
-                title={alt.title}
-                description={alt.description}
+                title={t(alt.title)}
+                description={t(alt.description)}
               />
             ))}
           </ul>
           <p className="text-[#2E3246] mt-[28px]">
-            These variations add even more excitement and challenge to the game,
-            offering something new for every player.
+            {t(
+              "These variations add even more excitement and challenge to the game, offering something new for every player."
+            )}
           </p>
         </div>
       </div>
       <div>
-        <SectionHeader icon={settings} text="Game Technology" />
+        <SectionHeader icon={settings} text={t("Game Technology")} />
         <p className="leading-[1.85em] mb-4 font-roboto tracking-wide text-[#2E3246]">
-          Online platforms use advanced technology to ensure a fair and
-          enjoyable Plinko experience:
+          {t(
+            "Online platforms use advanced technology to ensure a fair and enjoyable Plinko experience:"
+          )}
         </p>
         <ul className="flex flex-col gap-3">
           {gameTechnology.map((tech, index) => (
             <ListItem
               key={index}
               icon={tick}
-              title={tech.title}
-              description={tech.description}
+              title={t(tech.title)}
+              description={t(tech.description)}
             />
           ))}
         </ul>
         <p className="text-[#2E3246] mt-[28px]">
-          These features not only enhance the overall gaming experience but also
-          help build trust between the platform and players.
+          {t(
+            "These features not only enhance the overall gaming experience but also help build trust between the platform and players."
+          )}
         </p>
       </div>
 
       <div>
         <SectionHeader
           icon={trophy}
-          text="Why Choose Online Casino Platforms for Playing Plinko?"
+          text={t("Why Choose Online Casino Platforms for Playing Plinko?")}
         />
         <p className="leading-[1.85em] mb-4 font-roboto tracking-wide text-[#2E3246]">
-          Compared to other online Plinko casinos, many platforms offer
-          additional benefits:
+          {t(
+            "Compared to other online Plinko casinos, many platforms offer additional benefits:"
+          )}
         </p>
         <ul className="flex flex-col gap-3">
           {onlineCasinoBenefits.map((benefit, index) => (
             <ListItem
               key={index}
               icon={tick}
-              title={benefit.title}
-              description={benefit.description}
+              title={t(benefit.title)}
+              description={t(benefit.description)}
             />
           ))}
         </ul>
         <p className="text-[#2E3246] mt-[28px]">
-          These features combine to create a comprehensive and enjoyable gaming
-          experience.
+          {t(
+            "These features combine to create a comprehensive and enjoyable gaming experience."
+          )}
         </p>
       </div>
     </div>
