@@ -3,12 +3,39 @@ import tick from "/src/assets/icons/tick.svg";
 import exclaim from "/src/assets/icons/exclamation-mark.svg";
 import thumbs from "/src/assets/icons/thumbs-up.svg";
 import anothergamble from "/src/assets/another-balling-game.png";
+import { ListItem } from "./SecondPart";
+
+const tipsForSuccess = [
+  "Setting deposit limits.",
+  "Self-imposed time-outs.",
+  "Access to support services if gambling becomes a problem.",
+];
+
+const desc = [
+  `   It’s essential to keep in mind that setting limits is crucial when
+        playing any game of chance. Make sure to approach the game with a clear
+        strategy and a responsible mindset. Enjoyment should always be the
+        priority, so take breaks and avoid chasing losses.`,
+  `        If you’re feeling eager to try out Plinko, now is the perfect time to
+        explore your options. You can choose a platform, register an account,
+        and start playing right away. Remember that every drop of the chip is
+        unpredictable, and the next one could be your lucky shot. Just like with
+        any form of gambling, it’s wise to read reviews and gather feedback on
+        the platform and game version you intend to play. This way, you’ll be
+        better equipped to evaluate your overall gaming experience.`,
+  `        As you play, pay attention to the structure of the board and how it
+        influences the direction of the ball. Understanding the game dynamics
+        can help you plan your strategy and optimize your chances of hitting the
+        desired pockets. With time and experience, you’ll become more familiar
+        with the nuances of the game, enabling you to achieve the goals you’ve
+        set and hopefully collect some satisfying winnings along the way.`,
+];
 
 const ThirdPart = () => {
   return (
     <div className="mt-[51px] w-full px-4">
       <div className="flex w-full justify-start items-center">
-        <button className=" bg-[#F136A7] hover:text-[#F136A7] whitespace-nowrap gap-1 hover:bg-white flex justify-center items-center transition-all mx-auto m-10 rounded-[100px] text-lg text-white px-10 py-6 tracking-wider font-roboto  font-[700] text-[14px] leading-[16px] shadow-[2px_2px_29px_0_#F136A7] ">
+        <button className=" bg-[#F136A7] hover:text-[#F136A7]  gap-1 hover:bg-white flex justify-center items-center transition-all mx-auto m-10 rounded-[100px] text-lg text-white p-4 md:px-10 md:py-6  tracking-wider font-roboto  font-[700] text-[14px] leading-[20px] md:leading-[16px] shadow-[2px_2px_29px_0_#F136A7] ">
           <img src={bag} alt="gift" /> Play Plinko Online
           <img src={bag} alt="gift" />
         </button>
@@ -22,20 +49,9 @@ const ThirdPart = () => {
           control, such as:
         </p>
         <ul className="*:text-[#2E3246] flex flex-col gap-3">
-          <li className="flex justify-start items-start gap-2">
-            <img src={tick} alt="tick" />{" "}
-            <p className="text-[#2E3246]">Setting deposit limits.</p>
-          </li>
-          <li className="flex justify-start items-start gap-2">
-            <img src={tick} alt="tick" />{" "}
-            <p className="text-[#2E3246]">Self-imposed time-outs.</p>
-          </li>
-          <li className="flex justify-start items-start gap-2">
-            <img src={tick} alt="tick" />{" "}
-            <p className="text-[#2E3246]">
-              Access to support services if gambling becomes a problem.
-            </p>
-          </li>
+          {tipsForSuccess.map((tip, index) => (
+            <ListItem key={index} icon={tick} description={tip} />
+          ))}
         </ul>
       </div>
       <p className="text-[#2E3246] mt-[28px]">
@@ -71,29 +87,14 @@ const ThirdPart = () => {
           className="mx-auto mt-[53px] mb-[40px] rounded-[5px]"
         />
       </div>
-      <p className="leading-[1.85em] my-4 font-roboto tracking-wide text-[#2E3246]">
-        It’s essential to keep in mind that setting limits is crucial when
-        playing any game of chance. Make sure to approach the game with a clear
-        strategy and a responsible mindset. Enjoyment should always be the
-        priority, so take breaks and avoid chasing losses.
-      </p>
-      <p className="leading-[1.85em] my-4 font-roboto tracking-wide text-[#2E3246]">
-        If you’re feeling eager to try out Plinko, now is the perfect time to
-        explore your options. You can choose a platform, register an account,
-        and start playing right away. Remember that every drop of the chip is
-        unpredictable, and the next one could be your lucky shot. Just like with
-        any form of gambling, it’s wise to read reviews and gather feedback on
-        the platform and game version you intend to play. This way, you’ll be
-        better equipped to evaluate your overall gaming experience.
-      </p>
-      <p className="leading-[1.85em] my-4 font-roboto tracking-wide text-[#2E3246]">
-        As you play, pay attention to the structure of the board and how it
-        influences the direction of the ball. Understanding the game dynamics
-        can help you plan your strategy and optimize your chances of hitting the
-        desired pockets. With time and experience, you’ll become more familiar
-        with the nuances of the game, enabling you to achieve the goals you’ve
-        set and hopefully collect some satisfying winnings along the way.
-      </p>
+      {desc.map((i, idx) => (
+        <p
+          className="leading-[1.85em] my-4 font-roboto tracking-wide text-[#2E3246]"
+          key={idx}
+        >
+          {i}
+        </p>
+      ))}
     </div>
   );
 };

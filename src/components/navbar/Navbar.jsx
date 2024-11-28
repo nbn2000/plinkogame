@@ -3,6 +3,7 @@ import Logo from "../../assets/logo.png";
 import { Menu, Cancel } from "../../svg";
 import MenuModal from "./MenuModal";
 import LangageDropDown from "../languga-dropdown";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -18,9 +19,9 @@ const Navbar = () => {
   return (
     <nav className="w-full h-[80px] fixed bg-white top-0 left-0  shadow-[0_10px_40px_0_rgba(109,141,173,0.25)]">
       <div className="mx-auto px-4 flex flex-row  justify-between items-center gap-4  max-w-[1400px]">
-        <div className="w-max py-5 pr-5">
+        <Link to={"/"} className="w-max py-5 pr-5">
           <img src={Logo} alt="logo" className="w-full" />
-        </div>
+        </Link>
         <div className="flex justify-center items-center gap-3">
           <div className="hidden md:block">
             <LangageDropDown />

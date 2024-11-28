@@ -2,6 +2,7 @@ import MinusIcon from "/src/assets/icons/minus.svg";
 import PlusIcon from "/src/assets/icons/plus.svg";
 import pointer from "/src/assets/icons/hand-pointing-right.svg";
 import { useState } from "react";
+import useLocales from "/src/hooks/useLocales";
 
 const data = [
   {
@@ -30,10 +31,7 @@ const data = [
   },
   {
     title: "What are some popular variations of the Plinko game?",
-    p: `Different platforms offer unique variations of the traditional Plinko game, such as:
-Multiplier Plinko: This version includes special multipliers in the pockets that can significantly boost your winnings.
-Progressive Plinko: Each round increases the potential winnings as the prize pool grows progressively.
-Team Plinko: Players can collaborate to achieve common goals and share the rewards based on group performance.`,
+    p: "Different platforms offer unique variations of the traditional Plinko game, such as: Multiplier Plinko: This version includes special multipliers in the pockets that can significantly boost your winnings. Progressive Plinko: Each round increases the potential winnings as the prize pool grows progressively. Team Plinko: Players can collaborate to achieve common goals and share the rewards based on group performance.",
   },
   {
     title: "Can I play Plinko on mobile devices?",
@@ -41,14 +39,7 @@ Team Plinko: Players can collaborate to achieve common goals and share the rewar
   },
   {
     title: "What should I consider before playing Plinko for real money?",
-    p: `
-        Before playing Plinko for real money, consider the following:
-Choose a trusted platform: Make sure the platform is licensed, regulated, and has positive user reviews.
-Check game fairness: Look for platforms that use RNG and provably fair systems.
-Set a budget: Decide on a budget and stick to it to avoid spending more than you can afford.
-Read the game’s rules and payout structure: Understanding how the game works and what each pocket pays out can help you make informed betting decisions.
-Review the bonuses and promotions: Take advantage of bonuses like welcome offers or free spins to extend your gameplay.
-    `,
+    p: "Before playing Plinko for real money, consider the following: Choose a trusted platform: Make sure the platform is licensed, regulated, and has positive user reviews. Check game fairness: Look for platforms that use RNG and provably fair systems. Set a budget: Decide on a budget and stick to it to avoid spending more than you can afford. Read the game’s rules and payout structure: Understanding how the game works and what each pocket pays out can help you make informed betting decisions. Review the bonuses and promotions: Take advantage of bonuses like welcome offers or free spins to extend your gameplay.",
   },
   {
     title: "Is there a way to verify the fairness of Plinko games?",
@@ -56,11 +47,7 @@ Review the bonuses and promotions: Take advantage of bonuses like welcome offers
   },
   {
     title: "What are some responsible gaming tips for playing Plinko?",
-    p: `Here are a few responsible gaming tips to keep in mind when playing Plinko:
-Set time limits: Determine how long you’ll play and take regular breaks to avoid excessive gaming.
-Define win and loss limits: Decide in advance how much you’re willing to lose and stop if you reach that limit. Similarly, set a win limit to secure your profits.
-Avoid chasing losses: Don’t try to recover losses by increasing your bets. This can lead to overspending.
-Use available tools: Utilize platform tools like self-exclusion options or deposit limits if you feel that you’re losing control of your gameplay.`,
+    p: "Here are a few responsible gaming tips to keep in mind when playing Plinko: Set time limits: Determine how long you’ll play and take regular breaks to avoid excessive gaming. Define win and loss limits: Decide in advance how much you’re willing to lose and stop if you reach that limit. Similarly, set a win limit to secure your profits. Avoid chasing losses: Don’t try to recover losses by increasing your bets. This can lead to overspending. Use available tools: Utilize platform tools like self-exclusion options or deposit limits if you feel that you’re losing control of your gameplay.",
   },
   {
     title: "Why is Plinko so popular among players?",
@@ -69,6 +56,7 @@ Use available tools: Utilize platform tools like self-exclusion options or depos
 ];
 
 const InnerSection = ({ title, p, isOpen, onClick }) => {
+  const { t } = useLocales();
   return (
     <div
       className={`w-full px-4 rounded-lg bg-primaryLight cursor-pointer transition-all duration-250 ${
@@ -83,7 +71,7 @@ const InnerSection = ({ title, p, isOpen, onClick }) => {
             : "rounded-[20px]"
         } justify-between h-max md:h-14 transition-all`}
       >
-        <span className="font-[700] h-min ">{title}</span>
+        <span className="font-[700] h-min ">{t(title)}</span>
         <button>
           {isOpen ? (
             <img src={MinusIcon} alt="+" />
@@ -99,13 +87,14 @@ const InnerSection = ({ title, p, isOpen, onClick }) => {
             : "max-h-0 opacity-0 translate-y-4"
         }`}
       >
-        <p>{p}</p>
+        <p>{t(p)}</p>
       </div>
     </div>
   );
 };
 
 const Accordion = () => {
+  const { t } = useLocales();
   const [openIndex, setOpenIndex] = useState(null);
 
   const toggleAccordion = (index) => {
@@ -115,8 +104,8 @@ const Accordion = () => {
   return (
     <div className="w-full my-4 flex flex-col items-center gap-21.25 pt-6 pb-18.75 mt-17.5">
       <h3 className="font-[700] text-[28px] leading-[34px] w-full text-start mb-[10px] flex justify-start items-center gap-2">
-        <img src={pointer} alt="pointer" /> Frequently Asked Questions (FAQ)
-        About Plinko Game
+        <img src={pointer} alt="pointer" />{" "}
+        {t("Frequently Asked Questions (FAQ) About Plinko Game")}
       </h3>
       <div className="w-full flex flex-col items-center gap-[20px]">
         {data.map((item, index) => (

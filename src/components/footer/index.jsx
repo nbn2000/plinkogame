@@ -4,6 +4,7 @@ import kahnawake from "../../assets/kahnawake.png";
 import curacao from "../../assets/gaming-curacao.webp";
 import beGambleAware from "../../assets/be-gamble-aware.png";
 import only18 from "../../assets/only-18+.png";
+import { Link } from "react-router-dom";
 const emblems = [gamble, mga, kahnawake, curacao];
 
 const words = [
@@ -25,14 +26,15 @@ and we do not take responsibility for any outcomes or consequences.
 
 const FooterUpper = () => (
   <div className="w-full container mx-auto flex justify-center items-center flex-col gap-[27px]  py-[45px]">
-    <div className="w-full justify-between  flex items-center gap-3 flex-wrap max-w-[800px] mx-auto">
+    <div className="w-full justify-between  flex items-center gap-3 flex-wrap max-w-[800px] mx-auto pt-[60px]">
       {exLinks.map((i, idx) => (
-        <span
+        <Link
           key={idx}
+          to={i.link}
           className="underline leading-[23.2px] mx-auto text-[16px] font-[400] text-[#7F8C8D]"
         >
-          {i}
-        </span>
+          {i.name}
+        </Link>
       ))}
     </div>
     <div className="flex justify-between w-full items-center flex-wrap mx-auto">
@@ -60,7 +62,7 @@ const FooterUpper = () => (
 );
 
 const FooterDownSide = () => (
-  <div className="max-w-[1170px] mx-auto w-full flex justify-between items-center">
+  <div className="max-w-[1170px] mx-auto w-full flex justify-between items-center flex-wrap gap-3">
     <span className="text-[#777777] font-[400] text-[12px] leading-[12px]">
       Copyright 2024 © plinkogame.cc
     </span>
@@ -84,6 +86,11 @@ const Footer = () => {
   );
 };
 
-const exLinks = ["Cookie Policy", "Privacy Policy", "About Us", "Contact us"];
+const exLinks = [
+  { name: "Cookie Policy", link: "/cookie-policy" },
+  { name: "Privacy Policy", link: "/privacy-policy" },
+  { name: "About Us", link: "/about-us" },
+  { name: "Contact us", link: "/contact-us" },
+];
 
 export default Footer;
