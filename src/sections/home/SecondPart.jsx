@@ -319,11 +319,12 @@ const SecondPart = () => {
               ))}
             </ul>
           </section>
-
-          <SectionHeader
-            icon={trophy}
-            text={t("How to Choose a Reliable Online Casino for Playing")}
-          />
+        </div>
+        <SectionHeader
+          icon={trophy}
+          text={t("How to Choose a Reliable Online Casino for Playing")}
+        />
+        <div className="mx-auto my-10 p-5 w-full md:w-4/5">
           <section>
             <p className="text-gray-600 mb-5">
               The casinos we recommend fully meet all these criteria:
@@ -344,47 +345,9 @@ const SecondPart = () => {
           </section>
         </div>
 
-        <p className="leading-[1.85em] mb-4 font-roboto tracking-wide text-[#2E3246]">
-          {t(
-            "Online platforms use advanced technology to ensure a fair and enjoyable Plinko experience:"
-          )}
-        </p>
-        <ul className="flex flex-col gap-3">
-          {gameTechnology.map((tech, index) => (
-            <ListItem
-              key={index}
-              icon={tick}
-              title={t(tech.title)}
-              description={t(tech.description)}
-            />
-          ))}
-        </ul>
         <p className="text-[#2E3246] mt-[28px]">
           {t(
             "These features not only enhance the overall gaming experience but also help build trust between the platform and players."
-          )}
-        </p>
-      </div>
-
-      <div>
-        <p className="leading-[1.85em] mb-4 font-roboto tracking-wide text-[#2E3246]">
-          {t(
-            "Compared to other online Plinko casinos, many platforms offer additional benefits:"
-          )}
-        </p>
-        <ul className="flex flex-col gap-3">
-          {onlineCasinoBenefits.map((benefit, index) => (
-            <ListItem
-              key={index}
-              icon={tick}
-              title={t(benefit.title)}
-              description={t(benefit.description)}
-            />
-          ))}
-        </ul>
-        <p className="text-[#2E3246] mt-[28px]">
-          {t(
-            "These features combine to create a comprehensive and enjoyable gaming experience."
           )}
         </p>
       </div>

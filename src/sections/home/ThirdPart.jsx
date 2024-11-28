@@ -33,9 +33,11 @@ const ThirdPart = () => {
           <img src={exclaim} alt="lightning" /> {t("Responsible Gaming")}
         </h3>
         <p className="leading-[1.85em] mb-4 font-roboto tracking-wide text-[#2E3246]">
-          {t(
-            "Many platforms offer services and tools to help players stay in control, such as:"
-          )}
+          A responsible approach to gambling means being aware of your actions
+          and spending while playing. It’s essential to set time and budget
+          limits and avoid chasing losses. Remember that gambling is, first and
+          foremost, entertainment, not a way to earn money. Play wisely and only
+          for enjoyment.
         </p>
         <ul className="*:text-[#2E3246] flex flex-col gap-3">
           {tipsForSuccess.map((tip, index) => (
