@@ -15,7 +15,40 @@ const tipsForSuccess = [
   "Set a budget for each session and stick to it.",
   "Take advantage of any available bonuses or promotions on your chosen platform.",
 ];
-
+const tips = [
+  {
+    title: "Use Demo Game Modes",
+    desc: "In demo mode, you can better familiarize yourself with the game and test your own hypotheses without the risk of losing real money. Demo modes are available on nearly all platforms.",
+  },
+  {
+    title: "Set a Budget and Stick to It",
+    desc: "After getting acquainted with the game in demo mode, you can turn on to real play with real bets. The first thing you need to do in the real game is to determine the amount you are willing to spend and not exceed this limit to maintain control over your gameplay.",
+  },
+  {
+    title: "Play at a Low-Risk Level",
+    desc: "If you are a beginner, choose minimal risk settings to reduce the likelihood of losses and increase the stability of your winnings.",
+  },
+  {
+    title: "Experiment with Board Settings",
+    desc: "Change the number of pegs and rows to find a combination which best suits your playstyle.",
+  },
+  {
+    title: "Use a Gradual Betting Increase Strategy",
+    desc: "Start with the minimum bet and increase it each time you lose. When you win, you will recover all your losses. After a win, you can return to the minimum bet and start the process again. This is a very effective strategy but it is not suitable for beginners as it involves high risk and requires a substantial bankroll.",
+  },
+  {
+    title: "Observe Patterns",
+    desc: "Pay attention to the movement of the balls and analyze which areas of the board yield more winning results.",
+  },
+  {
+    title: "Apply a Stop-Win Tactic",
+    desc: "Decide in advance the winning amount at which you will stop playing to secure your earnings.",
+  },
+  {
+    title: "Develop Your Own Game Plan",
+    desc: "The most effective approach might be your personal strategy developed through observation of the game. Don’t be afraid to experiment and test your own hypotheses in practice. Be creative and inventive.",
+  },
+];
 const plinkoAlternatives = [
   {
     title: "Multiplier Plinko",
@@ -77,6 +110,13 @@ const onlineCasinoBenefits = [
   },
 ];
 
+const ineffectiveMethods = [
+  "Signals",
+  "Predictor programs",
+  "Telegram bots",
+  "Paid predictions",
+];
+
 const SectionHeader = ({ icon, text }) => (
   <h3 className="flex items-center gap-5 text-xl font-bold text-[28px] leading-[34px] my-5 text-[#151515]">
     <img src={icon} alt={text} /> {text}
@@ -109,24 +149,66 @@ const SecondPart = () => {
         className="mx-auto mt-[53px] mb-[70px] rounded-[5px]"
       />
       <div>
-        <SectionHeader icon={lighning} text={t("Tips for Success")} />
-        <p className="leading-[1.85em] mb-4 font-roboto tracking-wide text-[#2E3246]">
-          {t(
-            "Although Plinko is mainly a game of luck, there are a few strategies you can use to maximize your enjoyment and potential wins:"
-          )}
-        </p>
-        <ul className="*:text-[#2E3246] flex flex-col gap-3">
-          {tipsForSuccess.map((tip, index) => (
-            <ListItem key={index} icon={tick} description={t(tip)} />
-          ))}
-        </ul>
-        <p className="text-[#2E3246] mt-[28px]">
-          {t("Just remember to play responsibly and have fun!")}
-        </p>
+        <SectionHeader icon={lighning} text="Winning Strategies" />
+        <div className="mx-auto my-10 p-5 w-full md:w-4/5">
+          <p className="leading-[1.85em] mb-4 font-roboto tracking-wide text-[#2E3246]">
+            Although Plinko largely depends on luck, there are several
+            strategies that can help you enhance your gaming experience and
+            increase your chances of potential winnings:
+          </p>
+          <h2 className="text-2xl font-bold text-center mb-5">
+            Plinko Tips & Strategies
+          </h2>
+          <ul className="space-y-5 ">
+            {tips.map((tip, index) => (
+              <li
+                key={index}
+                className="p-4 border border-gray-300 rounded-lg shadow-md bg-white"
+              >
+                <p className="font-bold text-lg text-gray-800">{tip.title}</p>
+                <p className="text-gray-600 mt-2">{tip.desc}</p>
+              </li>
+            ))}
+          </ul>
+          <p className="text-[#2E3246] mt-[28px]">
+            The main thing to remember is that this game is based on a random
+            number generator. Although strategies and tactics can significantly
+            help in achieving your goals, luck remains the primary factor.
+            Therefore, I advise you to remember why we actually play—to have
+            fun. Sometimes it’s better to simply trust your luck and drop the
+            ball!
+          </p>
+        </div>
       </div>
 
       <div>
         <div>
+          <div className="mx-auto my-10 p-5 w-full md:w-4/5">
+            <h2 className="text-2xl font-bold text-center mb-5">
+              Ineffective Methods in Plinko
+            </h2>
+            <p className="text-gray-600 mb-5">
+              There are many online offers promising wins in Plinko, but most of
+              them are ineffective. Here’s what definitely won’t help:
+            </p>
+            <ul className="space-y-3">
+              {ineffectiveMethods.map((method, index) => (
+                <li
+                  key={index}
+                  className="p-3 border border-red-300 rounded-lg bg-red-50 text-red-700"
+                >
+                  {method}
+                </li>
+              ))}
+            </ul>
+            <p className="text-gray-600 mt-5">
+              If someone claims to have a “working” method to win the game but
+              requires you to pay to access it, ask yourself: why this person
+              doesn’t use the method himself if it actually works? The reality
+              is that there are no working methods, and the goal of sellers is
+              to make money off you.
+            </p>
+          </div>
           <SectionHeader
             icon={gem}
             text={t("What Makes Plinko So Exciting?")}

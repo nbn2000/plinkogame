@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Table() {
   return (
-    <div>
+    <div className="my-10">
       <h1 className="text-4xl px-20 ">Key Feature table</h1>
 
       <table className="table-auto mx-auto my-10 w-full md:w-4/5 border-collapse border border-slate-400">

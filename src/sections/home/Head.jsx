@@ -159,12 +159,13 @@ export default function Head() {
 
   return (
     <div className="mt-[40px] w-full px-4">
-      <Table />
       <p className="leading-[1.85em] font-roboto tracking-wide text-[#2E3246]">
         {t(
           "Plinko has gained immense popularity in the world of online gaming. Various versions of this classic game can be found on many platforms. This comprehensive guide will provide everything you need to know to start playing Plinko, whether you're an experienced player or just beginning your journey into online casinos. With this guide you’ll learn how to set clear goals for your gaming sessions and get the most enjoyment and rewards from this game."
         )}
       </p>
+      <Table />
+
       <div className="flex justify-center items-center">
         <button className="bg-[#F136A7] hover:text-[#F136A7] hover:bg-white transition-all m-10 rounded-[100px] text-lg text-white px-10 py-6 tracking-wider font-roboto font-bold text-[14px] shadow-[2px_2px_29px_0_#F136A7]">
           ⭐ {t("Play Plinko for Real Money!")} ⭐
