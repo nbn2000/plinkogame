@@ -6,7 +6,7 @@ import ThirdPart from "../sections/home/ThirdPart";
 import Header from "../sections/home/Header";
 const Home = () => {
   return (
-    <>
+    <div className="my-[80px]">
       <Header />
       <div className="container">
         <Head />
@@ -15,7 +15,7 @@ const Home = () => {
         <Accordion />
         <LastOne />
       </div>
-    </>
+    </div>
   );
 };
 
