@@ -6,52 +6,44 @@ import useLocales from "/src/hooks/useLocales";
 
 const data = [
   {
-    title: "What is Plinko and how does it work?",
-    p: "Plinko is a popular game that originated from the TV show “The Price is Right” and has since become a staple in online casinos. The game consists of a board filled with rows of pegs. Players drop a ball or chip from the top, and it bounces through the pegs until it lands in one of the pockets at the bottom, each with a designated payout. The excitement lies in the unpredictability of the ball’s path, as it can land in any pocket based on random bounces.",
+    title: "What is Plinko?",
+    p: "Plinko is a gambling game based on the random fall of a ball across a board with pegs, where the goal is to land in the winning slots.",
   },
   {
-    title: "Can I play Plinko for real money?",
-    p: "Yes, many online casinos offer Plinko for real money. You can place your bets and drop the ball, with the potential to win real cash prizes based on where the ball lands. To play Plinko for real money, you will need to register on a reputable platform, deposit funds, and place your wagers according to the game’s rules.",
+    title: "Can I play Plinko for free?",
+    p: "Yes, many online casinos offer demo modes that let you play without deposits and learn the game mechanics.",
   },
   {
-    title: "Is Plinko a game of skill or luck?",
-    p: "Plinko is primarily a game of luck. The path the ball takes through the pegs is mostly determined by chance, making it impossible to predict or control the outcome consistently. However, players can influence the risk levels and other game settings, which can add a layer of strategy to the game. Despite this, the final result largely depends on luck.",
+    title: "How can I customize the Plinko board?",
+    p: "You can select the number of pegs and rows and adjust the risk level to change the likelihood and size of winnings.",
   },
   {
-    title: "What are the best strategies for playing Plinko?",
-    p: "While Plinko is a game of chance, there are a few strategies that players can employ to enhance their experience: Start with smaller bets to understand the game’s dynamics before increasing your wager. Adjust the risk level to find the setting that matches your risk tolerance. Lower risk levels generally have smaller but more frequent payouts, while higher risk levels can lead to bigger wins but occur less often. Use the autoplay feature to test various strategies over multiple rounds. Set a budget for your session and stick to it. This helps in managing your bankroll effectively and prevents overspending.",
+    title: "What is the risk level in Plinko?",
+    p: "The risk level determines the balance between the frequency and size of winnings: low risk means smaller frequent wins while high risk means larger, less frequent wins.",
   },
   {
-    title: "Are Plinko games fair and trustworthy?",
-    p: "Most reputable platforms that offer Plinko use Random Number Generators (RNG) and provably fair systems to ensure that each game’s outcome is fair and random. This means that neither the player nor the platform can manipulate the results. Before playing, it’s essential to choose a licensed and regulated online casino to ensure that you’re engaging in a fair gaming environment.",
+    title: "How are winnings calculated?",
+    p: "Winnings depend on which slot the ball lands in. Some slots include multipliers that increase your bet.",
   },
   {
-    title: "What are the typical features of a Plinko game?",
-    p: "Plinko games often come with several customizable features: Number of Rows and Pegs: Players can adjust the number of rows or pegs to alter the board’s complexity. Risk Levels: You can switch between low, medium, and high risk, which changes the payout distribution and potential winnings. Autoplay Option: This feature allows players to automate the game, making it convenient to play multiple rounds in succession without manual input. Multipliers: Many Plinko games include multipliers that can significantly increase the amount of your winnings depending on where the ball lands.",
+    title: "Do I need a strategy to play Plinko?",
+    p: "Plinko is mostly based on luck, but using strategies like managing your bets or selecting the optimal risk level can enhance your experience.",
   },
   {
-    title: "What are some popular variations of the Plinko game?",
-    p: "Different platforms offer unique variations of the traditional Plinko game, such as: Multiplier Plinko: This version includes special multipliers in the pockets that can significantly boost your winnings. Progressive Plinko: Each round increases the potential winnings as the prize pool grows progressively. Team Plinko: Players can collaborate to achieve common goals and share the rewards based on group performance.",
+    title: "Is online Plinko safe to play?",
+    p: "Yes, if you choose a licensed and verified casino that uses random number generators (RNG) and provably fair systems.",
   },
   {
-    title: "Can I play Plinko on mobile devices?",
-    p: "Yes, most online casinos and gaming platforms offer mobile-friendly versions of Plinko. You can access these games through mobile apps or directly via the website’s mobile version. The responsive design ensures that the game functions smoothly on smartphones and tablets, providing a seamless experience regardless of the device you use.",
+    title: "Can I play Plinko on a mobile device?",
+    p: "Yes, most platforms support responsive design or mobile apps for convenient gaming on smartphones and tablets.",
   },
   {
-    title: "What should I consider before playing Plinko for real money?",
-    p: "Before playing Plinko for real money, consider the following: Choose a trusted platform: Make sure the platform is licensed, regulated, and has positive user reviews. Check game fairness: Look for platforms that use RNG and provably fair systems. Set a budget: Decide on a budget and stick to it to avoid spending more than you can afford. Read the game’s rules and payout structure: Understanding how the game works and what each pocket pays out can help you make informed betting decisions. Review the bonuses and promotions: Take advantage of bonuses like welcome offers or free spins to extend your gameplay.",
+    title: "Can I win real money in Plinko?",
+    p: "Yes, playing with real money allows you to win real prizes if your ball lands in a winning slot.",
   },
   {
-    title: "Is there a way to verify the fairness of Plinko games?",
-    p: "Yes, many platforms offering Plinko use a “provably fair” system, which relies on blockchain technology. This system allows players to verify the fairness of each game outcome. When playing on such platforms, you can view the game’s hash value and compare it against the server seed to confirm that the results were not tampered with.",
-  },
-  {
-    title: "What are some responsible gaming tips for playing Plinko?",
-    p: "Here are a few responsible gaming tips to keep in mind when playing Plinko: Set time limits: Determine how long you’ll play and take regular breaks to avoid excessive gaming. Define win and loss limits: Decide in advance how much you’re willing to lose and stop if you reach that limit. Similarly, set a win limit to secure your profits. Avoid chasing losses: Don’t try to recover losses by increasing your bets. This can lead to overspending. Use available tools: Utilize platform tools like self-exclusion options or deposit limits if you feel that you’re losing control of your gameplay.",
-  },
-  {
-    title: "Why is Plinko so popular among players?",
-    p: "Plinko’s popularity can be attributed to its simplicity, excitement, and visual appeal. The game’s unpredictable nature, combined with the potential for big wins, keeps players engaged. Additionally, the customizable features allow players to adjust the game to suit their preferences, making it appealing to both casual players and seasoned gamblers alike.",
+    title: "Why is Plinko more popular than other games?",
+    p: "This game stands out from traditional slots with its unique mechanics, making the gameplay fresh and exciting. It also allows for personalized adjustments, creating a more tailored experience for each player.",
   },
 ];
 
