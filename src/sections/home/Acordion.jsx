@@ -95,6 +95,18 @@ const Accordion = () => {
 
   return (
     <div className="w-full my-4 flex flex-col items-center gap-21.25 pt-6 pb-18.75 mt-17.5">
+      <div>
+        <h2 className="text-2xl font-bold p-4">
+          <span className="text-red-500 text-4xl ">🏳</span> Conclusion
+        </h2>
+        <p className="p-4 font-[400] text-[#2E3246] tracking-wider">
+          Plinko is an innovative approach on the classic Pachinko game. It
+          offers an engaging and unique experience for players looking for
+          something different from traditional slots. Adjustable risk levels,
+          high RTP, and simple yet thrilling gameplay make it an excellent
+          choice for both beginners and experienced players.
+        </p>
+      </div>
       <h3 className="font-[700] text-[28px] leading-[34px] w-full text-start mb-[10px] flex justify-start items-center gap-2">
         <img src={pointer} alt="pointer" />{" "}
         {t("Frequently Asked Questions (FAQ) About Plinko Game")}

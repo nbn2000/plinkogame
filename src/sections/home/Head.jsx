@@ -3,6 +3,7 @@ import remote from "/src/assets/icons/playstation-remote.svg";
 import tick from "/src/assets/icons/tick.svg";
 import phone from "/src/assets/icons/phone.svg";
 import useLocales from "/src/hooks/useLocales";
+import Table from "./Table";
 
 const ContentBlock = ({ icon, title, children }) => (
   <div>
@@ -117,6 +118,7 @@ export default function Head() {
 
   return (
     <div className="mt-[40px] w-full px-4">
+      <Table />
       <p className="leading-[1.85em] font-roboto tracking-wide text-[#2E3246]">
         {t(
           "The game of Plinko has become highly popular in the online gaming industry, and there are several exciting versions of this classic slot game across different platforms. This guide provides everything you need to know to start playing Plinko."
