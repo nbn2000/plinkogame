@@ -22,7 +22,8 @@ const Navbar = () => {
         <Link to={"/"} className="w-1/3 md:w-max py-5 pr-5">
           <img src={Logo} alt="logo" className="w-full" />
         </Link>
-        <button className="bg-[#F136A7]  hover:text-[#F136A7] transition-all mx-auto hover:bg-white rounded-[100px] text-white  py-4 px-6 font-[700] text-[14px] leading-[16px] shadow-[2px_2px_29px_0_#F136A7] md:hidden block">
+
+        <button className="bg-gradient-to-r from-purple-600 to-pink-500 hover:text-[#F136A7] transition-all mx-auto hover:bg-white rounded-md text-white py-4 px-6 font-[700] text-[14px] leading-[16px] shadow-[2px_2px_29px_0_#F136A7] md:hidden block">
           Play Now!
         </button>
         <div className="flex justify-center items-center gap-3">
