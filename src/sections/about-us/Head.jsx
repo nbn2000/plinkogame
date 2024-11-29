@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
-import aboutus from "../../assets/about-us.webp";
 import useLocales from "/src/hooks/useLocales";
+import { Trans } from "react-i18next";
+
+// this page is not added to json excapt en.json rest has no translation
 
 const Paragraph = ({ children, className }) => (
   <p
@@ -11,21 +13,6 @@ const Paragraph = ({ children, className }) => (
     {children}
   </p>
 );
-
-const Heading = ({ level, children, className }) => {
-  const Tag = `h${level}`;
-  return (
-    <Tag
-      className={`flex items-center gap-5 mt-12 font-bold md:text-${
-        level === 3 ? "4xl" : "2xl"
-      } text-${level === 3 ? "2xl" : "xl"} leading-[34px] my-5 text-[#151515] ${
-        className || ""
-      }`}
-    >
-      {children}
-    </Tag>
-  );
-};
 
 const ListItem = ({ title, content }) => (
   <li className="text-[#2E3246]">
@@ -39,119 +26,114 @@ const Head = () => {
   return (
     <div className="mt-[40px] mb-[60px] w-full px-4">
       <Paragraph className="mt-6">
-        {t(
-          "Welcome to {{siteName}}, the ultimate destination for fans of Plinko who want to dive deep into every aspect of the game. Our mission is clear: to bring users the most extensive and detailed information about Plinko games, strategies, and platforms. Whether you’re exploring Plinko for the first time or have been enjoying it for years, {{siteName}} is designed to be your trusted guide, providing accurate insights and expert recommendations.",
-          {
-            siteName: <i>Plinkogames.cc</i>,
+        <Trans
+          i18nKey={
+            "Welcome to our website, a treasure trove for <Link> Plinko </Link> enthusiasts eager to master every aspect of the game. Our mission is clear: to provide users with the most comprehensive and accurate information about Plinko's various aspects, including strategies and platforms. Whether you're a novice or a seasoned player, our site aims to be your reliable resource, offering accurate data and expert recommendations."
           }
-        )}
-      </Paragraph>
-      <div className="w-full flex justify-center items-center my-8">
-        <img src={aboutus} alt="about us photo" className="rounded-md" />
-      </div>
-      <Paragraph className="mt-6">
-        {t(
-          "At {{siteName}}, we understand that Plinko is more than just a game—it’s an experience filled with excitement and opportunity. Our platform offers an extensive library of resources dedicated to enhancing that experience. From tutorials and gameplay tips to in-depth analyses of Plinko variations and strategies, we strive to equip you with all the knowledge you need to fully enjoy the game and improve your chances of success.",
-          {
-            siteName: <i>Plinkogames.cc</i>,
-          }
-        )}
-      </Paragraph>
-      <Heading level={3}>{t("Meet Our Expert, Jason Miller")}</Heading>
-      <Paragraph className="mt-6">
-        {t(
-          "Our content is led by our in-house expert, {{strong}} , a seasoned professional in the online gaming industry who specializes in Plinko. Jason’s approach is hands-on: he rigorously tests every version of Plinko available, evaluates their mechanics, and delves into the platforms that offer them. His experience allows him to assess each game’s fairness, functionality, and entertainment value, ensuring that our visitors receive only the most reliable and comprehensive information.",
-          {
-            strong: <strong>Jason Miller</strong>,
-          }
-        )}
-      </Paragraph>
-      <Paragraph className="mt-6">
-        {t(
-          "Jason’s expertise extends beyond gameplay. He regularly provides insights into the best platforms for playing Plinko, the promotional offers and bonuses available, and the ways to maximize your gaming experience. With his deep understanding of the game and his commitment to quality, Jason’s guidance is invaluable, making him the go-to expert for anyone interested in mastering Plinko."
-        )}
-      </Paragraph>
-      <Heading level={3}>{t("Why Choose Plinkogames.cc?")}</Heading>
-      <Paragraph className="mt-6">
-        {t(
-          "Here at {{siteName}}, we’re committed to offering more than just surface-level information. Our platform is structured to provide everything a Plinko enthusiast could need, including:",
-          { siteName: <i>Plinkogames.cc</i> }
-        )}
-      </Paragraph>
-      <Paragraph className="mt-6">
-        <strong>{t("Up-to-Date Bonuses and Promotions")}</strong>
-      </Paragraph>
-      <Paragraph className="">
-        {t(
-          "The online gaming world is filled with bonuses, and Plinko is no exception. We bring you the latest promotions and bonuses from trusted gaming platforms, helping you maximize your playing potential. With {{siteLink}}, you’ll always be informed about current offers, allowing you to get the best deals and make the most of every play.",
-          {
-            siteLink: (
+          components={{
+            i: <i />,
+            strong: <strong />,
+            Link: (
               <Link
-                className="font-medium break-all !text-blue-600 dark:text-blue-500 hover:underline"
+                className="font-medium !text-blue-600 dark:text-blue-500 hover:underline"
                 to={"/"}
-              >
-                http://plinkogame.cc/
-              </Link>
+              />
             ),
-          }
+          }}
+        >
+          Welcome to our website, a treasure trove for
+          <Link
+            className="font-medium !text-blue-600 dark:text-blue-500 hover:underline"
+            to={"/"}
+          >
+            Plinko
+          </Link>
+          enthusiasts eager to master every aspect of the game. Our mission is
+          clear: to provide users with the most comprehensive and accurate
+          information about Plinko&apos;s various aspects, including strategies
+          and platforms. Whether you&apos;re a novice or a seasoned player, our
+          site aims to be your reliable resource, offering accurate data and
+          expert recommendations.
+        </Trans>
+      </Paragraph>
+      <Paragraph className="mt-6">
+        {t(
+          "We see Plinko as more than just a game—it's a world full of excitement and opportunities. Our platform features a rich library of resources designed to enhance your gaming experience. From educational programs to gameplay tips and strategy analyses, we strive to equip you with the necessary knowledge for an engaging game experience and to improve your chances of success."
         )}
       </Paragraph>
       <Paragraph className="mt-6">
-        <strong>{t("In-Depth Game Reviews")}</strong>
-      </Paragraph>
-      <Paragraph className="">
         {t(
-          "We offer detailed reviews of every Plinko variant available online. From traditional setups to modern innovations, our analyses cover mechanics, odds, payout structures, and even aesthetic elements. This comprehensive approach allows you to compare versions and find the ones that best match your style and preferences."
-        )}{" "}
-      </Paragraph>
-      <Paragraph className="mt-6">
-        <strong>{t("Guides and Strategies")}</strong>
-      </Paragraph>
-      <Paragraph className="">
-        {t(
-          "Our guides cover every angle of the Plinko experience, from understanding basic gameplay to advanced strategies. Jason’s in-depth articles teach you how to make informed bets, leverage bonuses, and approach each game with the tactics needed to increase your chances of success."
+          "Meet Our Expert - James Carter James Carter, a seasoned online gaming professional specializing in Plinko, leads our content. James approaches his work practically: he meticulously tests every version of Plinko, assesses their mechanics, and studies the platforms that offer them. His profound knowledge allows him to evaluate games for fairness and entertainment value, ensuring that you receive only reliable and comprehensive information."
         )}
       </Paragraph>
-      <ol className="list-decimal mt-5 ml-8">
-        <ListItem
-          title={t("Expert Reviews on Platforms")}
-          content={
-            <>
-              <br />
-              {t(
-                "Not all Plinko platforms are created equal. Jason meticulously examines each platform for security, fairness, and user experience, so you can confidently choose where to play. Our recommendations ensure that you find secure, high-quality platforms that deliver an exceptional Plinko experience."
-              )}
-            </>
-          }
-        />
-        <ListItem
-          title={t("Comparison Tools")}
-          content={
-            <>
-              <br />
-              {t(
-                "To help you navigate the world of Plinko, our comparison tools make it easy to see how different versions stack up. Whether you’re interested in classic versions, new innovations, or specific themes, our tools provide a straightforward way to evaluate your options and find the game that’s right for you."
-              )}
-            </>
-          }
-        />
-        <ListItem
-          title={t("Latest Industry News and Trends")}
-          content={
-            <>
-              <br />
-              {t(
-                "The world of online gaming evolves rapidly, and we’re here to keep you informed. With news on new game releases, emerging trends, and regulatory changes, {{siteName}} ensures you stay ahead in the ever-changing gaming landscape.",
-                { siteName: <i>Plinkogames.cc</i> }
-              )}
-            </>
-          }
-        />
-      </ol>
-      <Heading level={3}>{t("Our Commitment to Responsible Gaming")}</Heading>
       <Paragraph className="mt-6">
         {t(
-          "We believe that gaming should be both exciting and responsible. We encourage all users to play mindfully, setting limits to ensure that the game remains a source of fun and enjoyment. With resources and guidance on responsible gaming, we strive to create a balanced environment that respects both the thrill of Plinko and the importance of staying within healthy limits."
+          "James's expertise extends beyond gameplay. He regularly advises on the best platforms for playing Plinko, current promotions and bonuses, and strategies to maximize your gaming experience. His commitment to quality makes him a true expert, a valuable resource for anyone wanting to master the game."
+        )}
+      </Paragraph>
+      <Paragraph className="mt-6">
+        <Trans
+          i18nKey={
+            "Why Choose <Link > Our Site </Link> We aim to provide deep insights, not just superficial information. Our platform is designed to offer comprehensive support to Plinko enthusiasts:"
+          }
+          components={{
+            i: <i />,
+            strong: <strong />,
+            Link: (
+              <Link
+                className="font-medium !text-blue-600 dark:text-blue-500 hover:underline"
+                to={"/"}
+              />
+            ),
+          }}
+        >
+          Why Choose
+          <Link
+            className="font-medium !text-blue-600 dark:text-blue-500 hover:underline"
+            to={"/"}
+          >
+            Our Site
+          </Link>
+          We aim to provide deep insights, not just superficial information. Our
+          platform is designed to offer comprehensive support to Plinko
+          enthusiasts:
+        </Trans>
+      </Paragraph>
+      <ul className="list-disc mt-5 ml-8 space-y-6">
+        <ListItem
+          title={t("Current Bonuses and Promotions: ")}
+          content={
+            <>
+              {t(
+                "The online gaming world is full of offers, and we keep you informed about the latest bonuses and promotions to maximize your gaming potential."
+              )}
+            </>
+          }
+        />
+        <ListItem
+          title={t("Detailed Game Reviews: ")}
+          content={
+            <>
+              {t(
+                "From classic setups to modern innovations, our analysts cover mechanics, odds, payout structures, and design, allowing you to choose the best option for your style."
+              )}
+            </>
+          }
+        />
+        <ListItem
+          title={t("Guides and Strategies: ")}
+          content={
+            <>
+              {t(
+                "Our detailed guides cover everything from the basics to advanced strategies, enabling you to make informed bets and use bonuses to increase your chances of success."
+              )}
+            </>
+          }
+        />
+      </ul>
+      <Paragraph className="mt-6">
+        {t(
+          "Our Commitment to Responsible Gaming We believe that gaming should be both exciting and responsible. We encourage all our users to play consciously, setting personal limits to keep gaming enjoyable. We strive to create an environment where a respect for thrills is matched with maintaining healthy boundaries."
         )}
       </Paragraph>
     </div>

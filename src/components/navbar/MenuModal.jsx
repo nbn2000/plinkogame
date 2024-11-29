@@ -1,7 +1,9 @@
 import Logo from "../../assets/logo.png";
 import LangugaDropdown from "../languga-dropdown";
+import useLocales from "/src/hooks/useLocales";
 
 const MenuModal = ({ open }) => {
+  const { t } = useLocales();
   if (!open) return null;
   return (
     <div
@@ -13,11 +15,8 @@ const MenuModal = ({ open }) => {
           <img src={Logo} alt="logo" className="w-full" />
         </div>
         <LangugaDropdown isMobile />
-        {/* <button className="whitespace-nowrap bg-[#F136A7] hover:text-[#F136A7] hover:bg-white transition-all rounded-[100px] text-white px-5 py-3 font-[700] text-[14px] leading-[16px] shadow-[2px_2px_29px_0_#F136A7]">
-          Play Now!
-        </button> */}
         <button className="bg-gradient-to-r from-purple-600 to-pink-500 hover:text-[#F136A7] transition-all mx-auto hover:bg-white rounded-[100px] text-white py-4 px-6 font-[700] text-[14px] leading-[16px] shadow-[2px_2px_29px_0_#F136A7] md:hidden block">
-          Play Now!
+          {t("Play Now!")}
         </button>
         <span className="text-[#7f8c8d] text-xs font-[400] leading-[1.45em]">
           Copyright 2024 © plinkogame.cc

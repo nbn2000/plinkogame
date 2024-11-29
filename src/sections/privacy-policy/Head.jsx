@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import useLocales from "/src/hooks/useLocales";
+import { Trans } from "react-i18next";
 
 const Paragraph = ({ children, className }) => (
   <p
@@ -40,10 +41,27 @@ const Head = () => {
     <div className="mt-[40px] mb-[60px] w-full px-4">
       <div className="max-w-[800px] w-full">
         <Paragraph className="mt-6">
-          {t(
-            "This Privacy Policy outlines the policies and procedures of {{siteName}} (“the Company”, “We”, “Us”, or “Our”) regarding the collection, use, and disclosure of your information when you use our Website and informs you about your privacy rights and protections.",
-            { siteName: <i>Plinkogames.cc</i> }
-          )}
+          <Trans
+            i18nKey={
+              "This Privacy Policy outlines the policies and procedures of <i>Plinkogames.cc</i> (“the Company”, “We”, “Us”, or “Our”) regarding the collection, use, and disclosure of your information when you use our Website and informs you about your privacy rights and protections."
+            }
+            components={{
+              i: <i />,
+              strong: <strong />,
+              Link: (
+                <Link
+                  className="font-medium !text-blue-600 dark:text-blue-500 hover:underline"
+                  to={"/"}
+                />
+              ),
+            }}
+          >
+            This Privacy Policy outlines the policies and procedures of
+            <i>Plinkogames.cc</i> (“the Company”, “We”, “Us”, or “Our”)
+            regarding the collection, use, and disclosure of your information
+            when you use our Website and informs you about your privacy rights
+            and protections.
+          </Trans>
         </Paragraph>
         <Paragraph className="mt-6">
           {t(
@@ -73,7 +91,7 @@ const Head = () => {
           />
           <ListItem
             title={t("Country refers to: ")}
-            content={t(" United Kingdom")}
+            content={t("United Kingdom")}
           />
           <ListItem
             title={t("Device:")}
@@ -101,16 +119,30 @@ const Head = () => {
             title={t("Website: ")}
             content={
               <>
-                {t("Refers to Plinkogames.cc, accessible from {{siteLink}}", {
-                  siteLink: (
-                    <Link
-                      className="font-medium break-all text-blue-600 dark:text-blue-500 hover:underline"
-                      to={"/"}
-                    >
-                      http://plinkogame.cc/
-                    </Link>
-                  ),
-                })}
+                <Trans
+                  i18nKey={
+                    "Refers to Plinkogames.cc, accessible from <Link className='font-medium break-all text-blue-600 dark:text-blue-500 hover:underline' to={'/'} > http://plinkogame.cc/ </Link>"
+                  }
+                  components={{
+                    i: <i />,
+                    strong: <strong />,
+                    Link: (
+                      <Link
+                        className="font-medium !text-blue-600 dark:text-blue-500 hover:underline"
+                        to={"/"}
+                      />
+                    ),
+                  }}
+                >
+                  Refers to Plinkogames.cc, accessible from{" "}
+                  <Link
+                    className="font-medium break-all text-blue-600 dark:text-blue-500 hover:underline"
+                    to={"/"}
+                  >
+                    {" "}
+                    http://plinkogame.cc/{" "}
+                  </Link>
+                </Trans>
               </>
             }
           />
@@ -159,13 +191,25 @@ const Head = () => {
           </ul>
         </ol>
         <Paragraph className="mt-4 *:text-[#2E3246] ml-8">
-          {t(
-            "We use {{strong1}} (deleted after closing the browser) and {{strong2}} for various purposes:",
-            {
-              strong1: <strong> {t("Session Cookies")} </strong>,
-              strong2: <strong> {t("Persistent Cookies")} </strong>,
+          <Trans
+            i18nKey={
+              "We use <strong> Session Cookies </strong> (deleted after closing the browser) and <strong> Persistent Cookies </strong> for various purposes:"
             }
-          )}
+            components={{
+              i: <i />,
+              strong: <strong />,
+              Link: (
+                <Link
+                  className="font-medium !text-blue-600 dark:text-blue-500 hover:underline"
+                  to={"/"}
+                />
+              ),
+            }}
+          >
+            We use <strong> Session Cookies </strong> (deleted after closing the
+            browser) and <strong> Persistent Cookies </strong> for various
+            purposes:
+          </Trans>
         </Paragraph>
         <ul className="list-disc list-inside flex flex-col gap-3 ml-10 mt-4">
           <ListItem
@@ -231,19 +275,32 @@ const Head = () => {
         </ul>
         <Heading level={3}>{t("Learn More About Cookies")}</Heading>
         <Paragraph className="mt-4">
-          {t(
-            "To gain more knowledge about cookies in general, you may want to visit an informational site on “ {{internalLink}} ”.",
-            {
-              internalLink: (
-                <Link
-                  className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                  to={"/"}
-                >
-                  {t("What Are Cookies?")}
-                </Link>
-              ),
+          <Trans
+            i18nKey={
+              "To gain more knowledge about cookies in general, you may want to visit an informational site on “ <Link className='font-medium !text-blue-600 dark:text-blue-500 hover:underline' to={'/'} > What Are Cookies? </Link> ”."
             }
-          )}
+            components={{
+              i: <i />,
+              strong: <strong />,
+              Link: (
+                <Link
+                  className="font-medium !text-blue-600 dark:text-blue-500 hover:underline"
+                  to={"/"}
+                />
+              ),
+            }}
+          >
+            To gain more knowledge about cookies in general, you may want to
+            visit an informational site on “{" "}
+            <Link
+              className="font-medium !text-blue-600 dark:text-blue-500 hover:underline"
+              to={"/"}
+            >
+              {" "}
+              What Are Cookies?{" "}
+            </Link>{" "}
+            ”.
+          </Trans>
         </Paragraph>
         <Heading level={3}>{t("Sharing of Personal Data")}</Heading>
         <Paragraph className="mt-4">
@@ -352,26 +409,52 @@ const Head = () => {
         <Heading level={3}>{t("Contact Us")}</Heading>
 
         <Paragraph className="mt-4">
-          {t(
-            "For questions about this Privacy Policy, please reach out via our {{internalLink}} page.",
-            {
-              internalLink: (
-                <Link
-                  className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                  to={"/"}
-                >
-                  {t("Contact Us")}
-                </Link>
-              ),
+          <Trans
+            i18nKey={
+              "For questions about this Privacy Policy, please reach out via our <Link className='font-medium text-blue-600 dark:text-blue-500 hover:underline' to={'/'} > Contact Us </Link> page."
             }
-          )}
+            components={{
+              i: <i />,
+              strong: <strong />,
+              Link: (
+                <Link
+                  className="font-medium !text-blue-600 dark:text-blue-500 hover:underline"
+                  to={"/"}
+                />
+              ),
+            }}
+          >
+            For questions about this Privacy Policy, please reach out via our{" "}
+            <Link
+              className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+              to={"/"}
+            >
+              {" "}
+              Contact Us{" "}
+            </Link>{" "}
+            page.
+          </Trans>
         </Paragraph>
         <hr className="w-full h-[1px] text-[#ccc] bg-[#ccc] my-10" />
         <Paragraph className="mt-4">
-          {t(
-            "This adaptation aligns with {{siteName}} and includes essential details to ensure comprehensive coverage.",
-            { siteName: <i className="text-[#2E3246]">Plinkogames.cc</i> }
-          )}
+          <Trans
+            i18nKey={
+              "This adaptation aligns with <i>Plinkogames.cc</i> and includes essential details to ensure comprehensive coverage."
+            }
+            components={{
+              i: <i />,
+              strong: <strong />,
+              Link: (
+                <Link
+                  className="font-medium !text-blue-600 dark:text-blue-500 hover:underline"
+                  to={"/"}
+                />
+              ),
+            }}
+          >
+            This adaptation aligns with <i>Plinkogames.cc</i> and includes
+            essential details to ensure comprehensive coverage.
+          </Trans>
         </Paragraph>
       </div>
     </div>

@@ -4,6 +4,7 @@ import tick from "/src/assets/icons/tick.svg";
 import phone from "/src/assets/icons/phone.svg";
 import useLocales from "/src/hooks/useLocales";
 import Table from "./Table";
+import { Trans } from "react-i18next";
 
 const ContentBlock = ({ icon, title, children }) => (
   <div className="my-6">
@@ -45,112 +46,172 @@ export default function Head() {
     {
       icon: tick,
       content: (
-        <>
-          <strong>Simple Concept: </strong>
-          Easy rules and gameplay mechanics make the game accessible to both
-          beginners and experienced players.
-        </>
+        <Trans
+          i18nKey={
+            "<strong>Simple Concept: </strong> Easy rules and gameplay mechanics make the game accessible to both beginners and experienced players."
+          }
+          components={{
+            i: <i />,
+            strong: <strong />,
+          }}
+        >
+          <strong>Simple Concept: </strong> Easy rules and gameplay mechanics
+          make the game accessible to both beginners and experienced players.
+        </Trans>
       ),
     },
     {
       icon: tick,
       content: (
-        <>
-          <strong>Transparency with Blockchain: </strong>
-          Blockchain technology ensures fair play and guarantees the user date
-          security.
-        </>
+        <Trans
+          i18nKey={
+            "<strong>Transparency with Blockchain: </strong> Blockchain technology ensures fair play and guarantees the user date security."
+          }
+          components={{
+            i: <i />,
+            strong: <strong />,
+          }}
+        >
+          <strong>Transparency with Blockchain: </strong> Blockchain technology
+          ensures fair play and guarantees the user date security.
+        </Trans>
       ),
     },
     {
       icon: tick,
       content: (
-        <>
-          <strong>Customizable Game Board: </strong>
-          Players can choose the number of pegs and rows to create a board which
-          perfectly suits their preferences. Additionally, the edges of the
-          board can be customized according to individual preferences.
-        </>
+        <Trans
+          i18nKey={
+            "<strong>Customizable Game Board: </strong> Players can choose the number of pegs and rows to create a board which perfectly suits their preferences. Additionally, the edges of the board can be customized according to individual preferences."
+          }
+          components={{
+            i: <i />,
+            strong: <strong />,
+          }}
+        >
+          <strong>Customizable Game Board: </strong> Players can choose the
+          number of pegs and rows to create a board which perfectly suits their
+          preferences. Additionally, the edges of the board can be customized
+          according to individual preferences.
+        </Trans>
       ),
     },
     {
       icon: tick,
       content: (
-        <>
-          <strong>Risk Level Adjustment: </strong>
-          Players can set the game’s volatility (risk level) themselves,
-          allowing everyone to find their comfort zone.
-        </>
+        <Trans
+          i18nKey={
+            "<strong>Risk Level Adjustment: </strong> Players can set the game’s volatility (risk level) themselves, allowing everyone to find their comfort zone."
+          }
+          components={{
+            i: <i />,
+            strong: <strong />,
+          }}
+        >
+          <strong>Risk Level Adjustment: </strong> Players can set the game’s
+          volatility (risk level) themselves, allowing everyone to find their
+          comfort zone.
+        </Trans>
       ),
     },
     {
       icon: tick,
       content: (
-        <>
-          <strong>Multiple Versions and Adaptations: </strong>
-          The game is available on various platforms, each adding unique
-          features and characteristics.
-        </>
+        <Trans
+          i18nKey={
+            "<strong>Multiple Versions and Adaptations: </strong> The game is available on various platforms, each adding unique features and characteristics."
+          }
+          components={{
+            i: <i />,
+            strong: <strong />,
+          }}
+        >
+          <strong>Multiple Versions and Adaptations: </strong> The game is
+          available on various platforms, each adding unique features and
+          characteristics.
+        </Trans>
       ),
     },
     {
       icon: tick,
       content: (
-        <>
-          <strong>Autoplay Feature: </strong>
-          Want to watch the game without active involvement? Enable autoplay and
-          enjoy the process!
-        </>
+        <Trans
+          i18nKey={
+            "<strong>Autoplay Feature: </strong> Want to watch the game without active involvement? Enable autoplay and enjoy the process!"
+          }
+          components={{
+            i: <i />,
+            strong: <strong />,
+          }}
+        >
+          <strong>Autoplay Feature: </strong> Want to watch the game without
+          active involvement? Enable autoplay and enjoy the process!
+        </Trans>
       ),
     },
     {
       icon: tick,
       content: (
-        <>
-          <strong>Bonus Features: </strong>
-          Many online versions offer additional bonuses and features such as win
-          multipliers.
-        </>
+        <Trans
+          i18nKey={
+            "<strong>Bonus Features: </strong> Many online versions offer additional bonuses and features such as win multipliers."
+          }
+          components={{
+            i: <i />,
+            strong: <strong />,
+          }}
+        >
+          <strong>Bonus Features: </strong> Many online versions offer
+          additional bonuses and features such as win multipliers.
+        </Trans>
       ),
     },
     {
       icon: tick,
       content: (
-        <>
-          <strong>Social Aspect: </strong>
-          Play Plinko in real-time with other players in online casinos.
-        </>
+        <Trans
+          i18nKey={
+            "<strong>Social Aspect: </strong> Play Plinko in real-time with other players in online casinos."
+          }
+          components={{
+            i: <i />,
+            strong: <strong />,
+          }}
+        >
+          <strong>Social Aspect: </strong> Play Plinko in real-time with other
+          players in online casinos.
+        </Trans>
       ),
     },
   ];
 
   const howToPlaySteps = [
     {
-      title: "Set Your Bet: ",
+      title: t("Set Your Bet: "),
       content: t(
         "Decide the amount you want to spend on each ball drop. Choose a bet that fits your budget."
       ),
     },
     {
-      title: "Customize the Game Board: ",
+      title: t("Customize the Game Board: "),
       content: t(
         "Select the number of pegs and rows to create your ideal playing field."
       ),
     },
     {
-      title: "Choose the Risk Level: ",
+      title: t("Choose the Risk Level: "),
       content: t(
         "Adjust the risk settings—low to high—depending on your gambling style and tolerance for risk."
       ),
     },
     {
-      title: "Drop the Ball: ",
+      title: t("Drop the Ball: "),
       content: t(
         "Release the ball and watch as it bounces off the pegs, making its way to the prize slots."
       ),
     },
     {
-      title: "Collect Your Winnings: ",
+      title: t("Collect Your Winnings: "),
       content: t(
         "When the ball lands in a prize slot, your winnings will automatically be added to your account. Enjoy your reward and keep playing!"
       ),
