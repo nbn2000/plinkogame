@@ -1,5 +1,8 @@
 import { Link } from "react-router-dom";
 import useLocales from "/src/hooks/useLocales";
+import { Trans } from "react-i18next";
+
+// this page is not added to json excapt en.json rest has no translation
 
 const Paragraph = ({ children, className }) => (
   <p
@@ -37,219 +40,128 @@ const Head = () => {
   const { t } = useLocales();
   return (
     <div className="mt-[40px] mb-[60px] w-full px-4">
-      <h3 className="text-[#2E3246] font-bold">
-        {t("Last Updated:")} [11.06.24]
-      </h3>
       <div className="max-w-[800px] w-full">
         <Paragraph className="mt-6">
           {t(
-            "This Cookie Policy explains what cookies are and how we use them on {{siteName}}. Please review this policy to understand the types of cookies we use, the information we collect using cookies, and how that information is utilized.",
-            { siteName: <i>Plinkogames.cc</i> }
+            "This Cookie Usage Policy explains what cookies are, how we use them on our site, the types of cookies used, as well as what information they collect and how this information is processed. We recommend that you read this document to better understand how cookies are used and how they affect your interaction with our website. Please note that cookies usually do not contain personal information that can directly identify you. However, in cases where personal information is linked to cookie data, we manage this information in accordance with our Privacy Policy. We do not store sensitive information such as passwords or mailing addresses in cookies."
           )}
         </Paragraph>
-        <Paragraph className="mt-6">
-          {t(
-            "Cookies typically do not contain any personal data that directly identifies you. However, any personal information we store about you may be linked to the information stored in and gathered from cookies. For more details, please see our Privacy Policy."
-          )}
-        </Paragraph>
-        <Paragraph className="mt-6">
-          {t(
-            "We do not store sensitive personal details such as mailing addresses or account passwords within cookies."
-          )}
-        </Paragraph>
-
-        <Heading level={3}>{t("Definitions and Interpretation")}</Heading>
-        <Heading level={4}>{t("Definitions")}</Heading>
-        <Paragraph>{t("For the purposes of this Cookie Policy:")}</Paragraph>
+        <Heading level={4}>{t("Definitions and Terms")}</Heading>
         <ul className="list-disc list-inside flex flex-col gap-3 ml-4 mt-4">
           <ListItem
-            title={t("Company")}
+            title={t("Company: ")}
             content={
               <>
                 {t(
-                  "(referred to as “the Company”, “We”, “Us” or “Our”) refers to {{siteName}}",
-                  { siteName: <i>Plinkogames.cc.</i> }
+                  "In this document, the terms “Company”, “We”, “Us” or “Our” refer to the site you are on."
                 )}
               </>
             }
           />
           <ListItem
-            title={t("Cookies")}
+            title={t("Cookies: ")}
             content={t(
-              "are small files placed on your device (computer, mobile, or other) by a website, containing information about your browsing history on that website, among other purposes."
+              "Small text files stored on your device (computer, smartphone, etc.) while visiting our site. They contain information that helps improve your user experience."
             )}
           />
           <ListItem
-            title={t("Website")}
+            title={t("Website: ")}
             content={
               <>
-                {t("refers to {{siteName}}, accessible from {{siteLink}}", {
-                  siteName: <i>Plinkogames.cc</i>,
-                  siteLink: (
-                    <Link
-                      className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                      to={"/"}
-                    >
-                      http://plinkogame.cc
-                    </Link>
-                  ),
-                })}
+                {t(
+                  "Refers to the domain accessible at the address where you are located."
+                )}
               </>
             }
           />
           <ListItem
-            title={t("You")}
+            title={t("User: ")}
             content={t(
-              "refers to the individual accessing or using the Website, or a company or legal entity on behalf of which such individual is accessing or using the Website."
+              "You—the person visiting our website or using its services, or a legal entity acting through such a person."
             )}
           />
         </ul>
 
-        <Heading level={3}>{t("Use of Cookies")}</Heading>
-        <Heading level={4}>{t("Types of Cookies We Use")}</Heading>
-        <Paragraph>
+        <Paragraph className="mt-5">
           {t(
-            "Cookies on our site can be either “Persistent” or “Session” Cookies. Persistent Cookies stay on your device even when you go offline, while Session Cookies are deleted once you close your browser."
-          )}
-        </Paragraph>
-        <Paragraph className="mt-4">
-          {t(
-            "We utilize both session and persistent cookies for the purposes outlined below:"
-          )}
-        </Paragraph>
-        <ol className="list-decimal mt-5 ml-8">
-          <ListItem title={t("Necessary/Essential Cookies")} />
-          <ul className="list-disc list-inside flex flex-col gap-3 ml-4 mt-4">
-            <ListItem title={t("Type")} content={t("Session Cookies")} />
-            <ListItem title={t("Administered by")} content={t("Us")} />
-            <ListItem
-              title={t("Purpose")}
-              content={t(
-                "These cookies are essential to provide you with the services available through our Website and to enable specific functions. They help authenticate users and prevent fraudulent account use."
-              )}
-            />
-          </ul>
-          <ListItem title={t("Functionality Cookies")} />
-          <ul className="list-disc list-inside flex flex-col gap-3 ml-4 mt-4">
-            <ListItem title={t("Type")} content={t("Persistent Cookies")} />
-            <ListItem title={t("Administered by")} content={t("Us")} />
-            <ListItem
-              title={t("Purpose")}
-              content={t(
-                "These cookies allow us to remember the choices you make on our Website, such as login details or language preferences."
-              )}
-            />
-          </ul>
-        </ol>
-
-        <Heading level={3}>{t("Managing Your Cookie Preferences")}</Heading>
-        <Paragraph className="mt-4">
-          {t(
-            "If you prefer to restrict or disable the use of cookies on this Website, you must first disable cookies in your browser settings and then delete the cookies saved in your browser that are associated with our site."
-          )}
-        </Paragraph>
-        <Paragraph className="mt-4">
-          {t(
-            "If you do not accept our cookies, some inconvenience may occur during your use of the Website, and certain features may not function as intended."
-          )}
-        </Paragraph>
-
-        <Heading level={4}>
-          {t("Instructions to Delete or Refuse Cookies")}
-        </Heading>
-        <Paragraph className="mt-4">
-          {t(
-            "If you wish to delete cookies or prevent your browser from accepting cookies, please visit the support pages of your browser:"
+            "Cookie Usage Types of Cookies We Use Our website employs two main types of cookies: • Session cookies: Stored temporarily and deleted immediately after closing the browser. • Persistent cookies: Remain on your device even after the session ends, to save your settings and improve interactions with the site during subsequent visits. We use the following categories of cookies:"
           )}
         </Paragraph>
         <ul className="list-disc list-inside flex flex-col gap-3 ml-4 mt-4">
           <ListItem
-            title={t("Chrome")}
+            title={t("Essential cookies o Type: Session o Administered by: ")}
             content={
-              <Link
-                className="font-medium break-all text-blue-600 dark:text-blue-500 hover:underline"
-                to={"/"}
-              >
-                https://support.google.com/accounts/answer/32050
-              </Link>
+              <>
+                {t(
+                  "Us o Purpose: These cookies ensure the proper functioning of the site, including user authentication and preventing fraudulent activity. Without them, some functions of the site would be impossible to use."
+                )}
+              </>
             }
           />
           <ListItem
-            title={t("Internet Explorer")}
-            content={
-              <Link
-                className="font-medium break-all text-blue-600 dark:text-blue-500 hover:underline"
-                to={"/"}
-              >
-                http://support.microsoft.com/kb/278835
-              </Link>
-            }
-          />
-          <ListItem
-            title={t("Firefox")}
-            content={
-              <Link
-                className="font-medium break-all text-blue-600 dark:text-blue-500 hover:underline"
-                to={"/"}
-              >
-                https://support.mozilla.org/en-US/kb/delete-cookies-remove-info-websites-stored
-              </Link>
-            }
-          />
-          <ListItem
-            title={t("Safari")}
-            content={
-              <Link
-                className="font-medium  break-all text-blue-600 dark:text-blue-500 hover:underline"
-                to={"/"}
-              >
-                https://support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471/mac
-              </Link>
-            }
+            title={t(
+              "Functional cookies o Type: Persistent o Administered by: "
+            )}
+            content={t(
+              "Us o Purpose: Allow to save your settings, such as selected language or login data, to improve your site usage experience and save you from having to re-enter information."
+            )}
           />
         </ul>
-        <Paragraph className="mt-4">
+        <Paragraph className="mt-5">
           {t(
-            "For any other browsers, please consult the official support pages of those browsers."
+            "Managing Cookies You can manage cookies yourself through your browser settings. To do this:"
           )}
         </Paragraph>
-        <Heading level={3}>{t("Learn More About Cookies")}</Heading>
+        <ul className="list-disc list-inside flex flex-col gap-3 ml-4 mt-4">
+          <ListItem
+            title={""}
+            content={t("Disable cookies in the browser settings.")}
+          />
+          <ListItem
+            title={""}
+            content={t(
+              "Delete already saved cookies associated with our site. Note: If you disable the use of cookies, some functions of the site may not work correctly or may be unavailable."
+            )}
+          />
+        </ul>
+
         <Paragraph className="mt-4">
           {t(
-            "To gain more knowledge about cookies in general, you may want to visit an informational site on “{{internalLink}}”.",
-            {
-              internalLink: (
-                <Link
-                  className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                  to={"/"}
-                >
-                  What Are Cookies?
-                </Link>
-              ),
+            "How to Delete or Block Cookies If you want to delete cookies or block their use, follow the instructions for your browser: • Google Chrome: Instructions • Internet Explorer: Instructions • Mozilla Firefox: Instructions • Safari: Instructions If you use another browser, visit the official site of its developer for instructions."
+          )}
+        </Paragraph>
+        <Paragraph className="mt-4">
+          {t(
+            "Learn More About Cookies For more information on how cookies work, you can visit the site “What are cookies?”"
+          )}
+        </Paragraph>
+
+        <Paragraph className="mt-4">
+          <Trans
+            i18nKey={
+              "Contact Us If you have any questions about this Cookie Usage Policy, you can contact us through the “<Link > Contact Us </Link>” page on our website. We are here to help!"
             }
-          )}
-        </Paragraph>
-        <Heading level={3}>{t("Contact Us")}</Heading>
-        <Paragraph className="mt-4">
-          {t(
-            "If you have any questions regarding this Cookie Policy, please contact us by visiting our {{internalLink}} page on the Website.",
-            {
-              internalLink: (
+            components={{
+              i: <i />,
+              strong: <strong />,
+              Link: (
                 <Link
-                  className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                  className="font-medium !text-blue-600 dark:text-blue-500 hover:underline"
                   to={"/"}
-                >
-                  Contact Us
-                </Link>
+                />
               ),
-            }
-          )}
-        </Paragraph>
-        <Paragraph className="mt-4">
-          {t(
-            "This version reflects {{siteName}} and retains the necessary information for clarity and compliance.",
-            { siteName: <i>Plinkogames.cc</i> }
-          )}
+            }}
+          >
+            Contact Us If you have any questions about this Cookie Usage Policy,
+            you can contact us through the “
+            <Link
+              className="font-medium !text-blue-600 dark:text-blue-500 hover:underline"
+              to={"/"}
+            >
+              Contact Us
+            </Link>
+            ” page on our website. We are here to help!
+          </Trans>
         </Paragraph>
       </div>
     </div>

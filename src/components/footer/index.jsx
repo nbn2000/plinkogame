@@ -5,61 +5,54 @@ import curacao from "../../assets/gaming-curacao.webp";
 import beGambleAware from "../../assets/be-gamble-aware.png";
 import only18 from "../../assets/only-18+.png";
 import { Link } from "react-router-dom";
+import useLocales from "/src/hooks/useLocales";
 const emblems = [gamble, mga, kahnawake, curacao];
 
 const words = [
-  `
-    RESPONSIBLE GAMBLING: At plinkogame.cc, we prioritize responsible gaming
-and urge our partners to follow suit. Our main objective is to ensure that online
-casino gaming stays a fun and worry-free experience. To maintain control and
-prevent potential financial concerns, we encourage taking breaks when needed.
-    `,
-  `
-        PLAY RESPONSIBLY: plinkogame.cc is an independent platform and is not
-directly associated with the websites we promote. Before participating in any
-gambling activities, it’s important to ensure you are complying with all relevant
-legal regulations. Please note that our content is provided for informational
-purposes only. By clicking on the links, you will be directed to external websites,
-and we do not take responsibility for any outcomes or consequences.
-    `,
+  "RESPONSIBLE GAMBLING: At plinkogame.cc, we prioritize responsible gaming and urge our partners to follow suit. Our main objective is to ensure that online casino gaming stays a fun and worry-free experience. To maintain control and prevent potential financial concerns, we encourage taking breaks when needed.",
+  "PLAY RESPONSIBLY: plinkogame.cc is an independent platform and is not directly associated with the websites we promote. Before participating in any gambling activities, it’s important to ensure you are complying with all relevant legal regulations. Please note that our content is provided for informational purposes only. By clicking on the links, you will be directed to external websites, and we do not take responsibility for any outcomes or consequences.",
 ];
 
-const FooterUpper = () => (
-  <div className="w-full container mx-auto flex justify-center items-center flex-col gap-[27px]  py-[45px]">
-    <div className="w-full justify-between  flex items-center gap-3 flex-wrap max-w-[800px] mx-auto pt-[60px]">
-      {exLinks.map((i, idx) => (
-        <Link
-          key={idx}
-          to={i.link}
-          className="underline leading-[23.2px] mx-auto text-[16px] font-[400] text-[#7F8C8D]"
-        >
-          {i.name}
-        </Link>
-      ))}
-    </div>
-    <div className="flex justify-between w-full items-center flex-wrap mx-auto">
-      {emblems.map((i, idx) => (
-        <img src={i} alt={idx} key={idx} width={275} className="mx-auto" />
-      ))}
-    </div>
-    <div className="flex justify-between w-full items-start gap-2 flex-wrap md:flex-nowrap">
-      {words.map((i, idx) => (
-        <p
-          key={idx}
-          className="max-w-[570px] mx-auto w-full font-[400] text-[16px] leading-[23.2px] text-[#7F8C8D]"
-        >
-          {i}
+const FooterUpper = () => {
+  const { t } = useLocales();
+  return (
+    <div className="w-full container mx-auto flex justify-center items-center flex-col gap-[27px]  py-[45px]">
+      <div className="w-full justify-between  flex items-center gap-3 flex-wrap max-w-[800px] mx-auto pt-[60px]">
+        {exLinks.map((i, idx) => (
+          <Link
+            key={idx}
+            to={i.link}
+            className="underline leading-[23.2px] mx-auto text-[16px] font-[400] text-[#7F8C8D]"
+          >
+            {t(i.name)}
+          </Link>
+        ))}
+      </div>
+      <div className="flex justify-between w-full items-center flex-wrap mx-auto">
+        {emblems.map((i, idx) => (
+          <img src={i} alt={idx} key={idx} width={275} className="mx-auto" />
+        ))}
+      </div>
+      <div className="flex justify-between w-full items-start gap-2 flex-wrap md:flex-nowrap">
+        {words.map((i, idx) => (
+          <p
+            key={idx}
+            className="max-w-[570px] mx-auto w-full font-[400] text-[16px] leading-[23.2px] text-[#7F8C8D]"
+          >
+            {t(i)}
+          </p>
+        ))}
+      </div>
+      <div className="flex justify-center w-full items-start gap-2">
+        <p className="max-w-[450px] w-full text-center font-[400] text-[16px] leading-[23.2px] text-[#7F8C8D]">
+          {t(
+            "18+, For new customers only, T&Cs apply, Play responsibly. Copyright 2024 © plinkogame.cc"
+          )}
         </p>
-      ))}
+      </div>
     </div>
-    <div className="flex justify-center w-full items-start gap-2">
-      <p className="max-w-[450px] w-full text-center font-[400] text-[16px] leading-[23.2px] text-[#7F8C8D]">
-        18+, For new customers only, T&Cs apply, Play responsibly. Copyright
-        2024 © plinkogame.cc
-      </p>
-    </div>
-  </div>
-);
+  );
+};
 
 const FooterDownSide = () => (
   <div className="max-w-[1170px] mx-auto w-full flex justify-between items-center flex-wrap gap-3">

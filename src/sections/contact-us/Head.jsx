@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
-import contactus from "../../assets/plink-game.jpg";
 import useLocales from "/src/hooks/useLocales";
+import { Trans } from "react-i18next";
+
+// this page is not added to json excapt en.json rest has no translation
 
 const Paragraph = ({ children, className }) => (
   <p
@@ -39,34 +41,44 @@ const Head = () => {
 
   return (
     <div className="mt-[40px] mb-[60px] w-full px-4">
-      <div className="w-full my-8">
-        <img src={contactus} alt="contact us photo" className="rounded-md" />
-      </div>
       <Paragraph className="mt-6">
-        {t(
-          "Thank you for visiting {{siteLink}}. We’re here to help you with any questions, concerns, or feedback you may have. Whether you’re looking for more information about Plinko, need assistance with our platform, or want to share your experience with us, we’re always happy to hear from you.",
-          {
-            siteLink: (
-              <Link
-                className="font-medium break-all !text-blue-600 dark:text-blue-500 hover:underline"
-                to={"/"}
-              >
-                http://plinkogame.cc/
-              </Link>
-            ),
+        <Trans
+          i18nKey={
+            "Thank you for visiting our site. We are always ready to assist you with any questions, issues, or suggestions you may have. If you need additional information about <Link> Plinko</Link>, require support with our platform, or wish to share your experiences, we are always open to communication."
           }
-        )}
+          components={{
+            i: <i />,
+            strong: <strong />,
+            Link: (
+              <Link
+                className="font-medium !text-blue-600 dark:text-blue-500 hover:underline"
+                to={"/"}
+              />
+            ),
+          }}
+        >
+          Thank you for visiting our site. We are always ready to assist you
+          with any questions, issues, or suggestions you may have. If you need
+          additional information about
+          <Link
+            className="font-medium break-all !text-blue-600 dark:text-blue-500 hover:underline"
+            to={"/"}
+          >
+            Plinko
+          </Link>
+          , require support with our platform, or wish to share your
+          experiences, we are always open to communication.
+        </Trans>
       </Paragraph>
-      <Heading level={4}>{t("Our Commitment to Responsible Gaming")}</Heading>
+      <Heading level={4}>{t("Ways to contact us:")}</Heading>
 
-      <ol className="list-decimal space-y-8 mt-5 ml-8">
+      <ol className="list-disc space-y-8 mt-5 ml-8">
         <ListItem
-          title={t("Contact Form")}
+          title={t("Feedback Form")}
           content={
             <>
-              <br />
               {t(
-                "Please use our contact form available on this page for a direct way to reach our support team. Just fill in your name, email, and message, and we’ll get back to you as soon as possible."
+                "Use the feedback form on our site for quick communication with our support service. Fill in your name, email address, and message, and we will try to respond as quickly as possible."
               )}
             </>
           }
@@ -75,19 +87,8 @@ const Head = () => {
           title={t("Email")}
           content={
             <>
-              <br />
               {t(
-                "For specific inquiries, feel free to email us at {{siteLink}}. Our team is available to assist you with any questions you may have, from game tips to platform navigation.",
-                {
-                  siteLink: (
-                    <Link
-                      className="font-medium break-all !text-blue-600 dark:text-blue-500 hover:underline"
-                      to={"/"}
-                    >
-                      support@plinkogames.cc
-                    </Link>
-                  ),
-                }
+                "If you have specific inquiries, you can email us. Our team is ready to provide the necessary assistance, whether it involves questions about the game or using the platform."
               )}
             </>
           }
@@ -96,19 +97,16 @@ const Head = () => {
           title={t("Social Media")}
           content={
             <>
-              <br />
               {t(
-                "Connect with us on our social media channels to stay updated on new guides, features, and exclusive content related to Plinko."
+                "Follow us on social media to stay updated on the latest updates, features, and exclusive content about Plinko."
               )}
             </>
           }
         />
       </ol>
-      <Heading level={3}>{t("Feedback & Suggestions")}</Heading>
       <Paragraph className="mt-6">
         {t(
-          "At {{siteName}}, your experience is our priority. We welcome your suggestions and ideas on how we can improve our platform and content. Please reach out through our contact form or email, and let us know what you think!",
-          { siteName: <i>Plinkogames.cc</i> }
+          "Feedback and Suggestions Your opinion is very important to us. We are always pleased to receive feedback and suggestions on how we can improve our platform and content. Feel free to share your ideas through the feedback form or by email. Your input helps us improve!"
         )}
       </Paragraph>
     </div>

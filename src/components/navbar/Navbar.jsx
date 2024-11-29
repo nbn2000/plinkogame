@@ -4,10 +4,12 @@ import { Menu, Cancel } from "../../svg";
 import MenuModal from "./MenuModal";
 import LangageDropDown from "../languga-dropdown";
 import { Link } from "react-router-dom";
+import useLocales from "/src/hooks/useLocales";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [animation, setAnimation] = useState(false);
+  const { t } = useLocales();
   const handleClick = () => {
     setOpen(!open);
     setAnimation(true);
@@ -24,14 +26,14 @@ const Navbar = () => {
         </Link>
 
         <button className="bg-gradient-to-r from-purple-600 to-pink-500 hover:text-[#F136A7] transition-all mx-auto hover:bg-white rounded-md text-white py-4 px-6 font-[700] text-[14px] leading-[16px] shadow-[2px_2px_29px_0_#F136A7] md:hidden block">
-          Play Now!
+          {t("Play Now!")}
         </button>
         <div className="flex justify-center items-center gap-3">
           <div className="hidden md:block">
             <LangageDropDown />
           </div>
           <button className="whitespace-nowrap bg-[#F136A7] hover:text-[#F136A7] transition-all hover:bg-white rounded-[100px] text-white px-5 py-3 font-[700] text-[14px] leading-[16px] shadow-[2px_2px_29px_0_#F136A7] hidden md:block">
-            Play Now!
+            {t("Play Now!")}
           </button>
           <div className="relative md:hidden">
             <button

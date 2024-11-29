@@ -1,6 +1,5 @@
 import gift from "/src/assets/icons/gift.svg";
 import bowling from "/src/assets/bowling-game.jpg";
-import tick from "/src/assets/icons/tick.svg";
 import lighning from "/src/assets/icons/yellow-lightning.svg";
 import gem from "/src/assets/icons/gem.svg";
 import statistics from "/src/assets/icons/statistics.svg";
@@ -8,13 +7,6 @@ import settings from "/src/assets/icons/settings.svg";
 import trophy from "/src/assets/icons/trofee.svg";
 import useLocales from "/src/hooks/useLocales";
 
-const tipsForSuccess = [
-  "Play a few rounds with smaller bets to get familiar with the game.",
-  "Experiment with different risk levels to find your preferred style.",
-  "Use the autoplay feature to test different strategies.",
-  "Set a budget for each session and stick to it.",
-  "Take advantage of any available bonuses or promotions on your chosen platform.",
-];
 const tips = [
   {
     title: "Use Demo Game Modes",
@@ -64,50 +56,6 @@ const plinkoAlternatives = [
     title: "Team",
     description:
       "Play with other players, joining forces to achieve common goals and share the rewards.",
-  },
-];
-
-const gameTechnology = [
-  {
-    title: "Random Number Generators (RNG)",
-    description: "Ensure that each ball drop is random and unpredictable.",
-  },
-  {
-    title: "Provably Fair Systems",
-    description:
-      "Players can verify the fairness of each game’s outcome using blockchain technology.",
-  },
-  {
-    title: "Responsive Design",
-    description:
-      "Makes playing Plinko effective on any device and screen orientation.",
-  },
-];
-
-const onlineCasinoBenefits = [
-  {
-    title: "Variety of Games",
-    description:
-      "Besides Plinko, there’s a wide selection of other games to explore.",
-  },
-  {
-    title: "Promotions and Bonuses",
-    description:
-      "Special offers are available for both new and existing players.",
-  },
-  {
-    title: "Secure Transactions",
-    description:
-      "The latest technology ensures the safety of your money and personal information.",
-  },
-  {
-    title: "Customer Support",
-    description: "Quick and easy assistance for any issues that arise.",
-  },
-  {
-    title: "Mobile Availability",
-    description:
-      "Play Plinko on the go using a mobile application or mobile version of the website.",
   },
 ];
 
@@ -204,12 +152,12 @@ const SecondPart = () => {
         className="mx-auto mt-[53px] mb-[70px] rounded-[5px]"
       />
       <div>
-        <SectionHeader icon={lighning} text="Winning Strategies" />
+        <SectionHeader icon={lighning} text={t("Winning Strategies")} />
         <div className="mx-auto my-10 p-1 md:p-5 w-full md:w-4/5">
           <p className="leading-[1.85em] mb-4 font-roboto tracking-wide text-[#2E3246]">
-            Although Plinko largely depends on luck, there are several
-            strategies that can help you enhance your gaming experience and
-            increase your chances of potential winnings:
+            {t(
+              "Although Plinko largely depends on luck, there are several strategies that can help you enhance your gaming experience and increase your chances of potential winnings:"
+            )}
           </p>
 
           <ul className="space-y-5 ">
@@ -218,29 +166,32 @@ const SecondPart = () => {
                 key={index}
                 className="p-1 md:p-4 border border-gray-300 rounded-lg shadow-md bg-white"
               >
-                <p className="font-bold text-lg text-gray-800">{tip.title}</p>
-                <p className="text-gray-600 mt-2">{tip.desc}</p>
+                <p className="font-bold text-lg text-gray-800">
+                  {t(tip.title)}
+                </p>
+                <p className="text-gray-600 mt-2">{t(tip.desc)}</p>
               </li>
             ))}
           </ul>
           <p className="text-[#2E3246] mt-[28px]">
-            The main thing to remember is that this game is based on a random
-            number generator. Although strategies and tactics can significantly
-            help in achieving your goals, luck remains the primary factor.
-            Therefore, I advise you to remember why we actually play—to have
-            fun. Sometimes it’s better to simply trust your luck and drop the
-            ball!
+            {t(
+              "The main thing to remember is that this game is based on a random number generator. Although strategies and tactics can significantly help in achieving your goals, luck remains the primary factor. Therefore, I advise you to remember why we actually play—to have fun. Sometimes it’s better to simply trust your luck and drop the ball!"
+            )}
           </p>
         </div>
       </div>
 
       <div>
         <div>
-          <SectionHeader icon={statistics} text="Which Methods DO NOT Work" />
+          <SectionHeader
+            icon={statistics}
+            text={t("Which Methods DO NOT Work")}
+          />
           <div className="mx-auto my-10 p-5 w-full md:w-4/5">
             <p className="text-gray-600 mb-5">
-              There are many online offers promising wins in Plinko, but most of
-              them are ineffective. Here’s what definitely won’t help:
+              {t(
+                "There are many online offers promising wins in Plinko, but most of them are ineffective. Here’s what definitely won’t help:"
+              )}
             </p>
             <ul className="space-y-3">
               {ineffectiveMethods.map((method, index) => (
@@ -248,34 +199,34 @@ const SecondPart = () => {
                   key={index}
                   className="p-3 border border-red-300 rounded-lg bg-red-50 text-red-700"
                 >
-                  {method}
+                  {t(method)}
                 </li>
               ))}
             </ul>
             <p className="text-gray-600 mt-5">
-              If someone claims to have a “working” method to win the game but
-              requires you to pay to access it, ask yourself: why this person
-              doesn’t use the method himself if it actually works? The reality
-              is that there are no working methods, and the goal of sellers is
-              to make money off you.
+              {t(
+                "If someone claims to have a “working” method to win the game but requires you to pay to access it, ask yourself: why this person doesn’t use the method himself if it actually works? The reality is that there are no working methods, and the goal of sellers is to make money off you."
+              )}
             </p>
           </div>
 
-          <SectionHeader icon={gem} text=" What Makes Plinko So Exciting?" />
+          <SectionHeader
+            icon={gem}
+            text={t("What Makes Plinko So Exciting?")}
+          />
           <div className="mx-auto my-10 p-5 w-full md:w-4/5">
             <p className="text-gray-600 mb-5">
-              Although this game has ancient roots, its online versions are
-              modern and feel like a brand-new experience for today’s players.
-              From my experience, I can say this game is truly unique and stands
-              out from other slots. Its originality makes it so appealing
-              because we always enjoy trying something new.
+              {t(
+                "Although this game has ancient roots, its online versions are modern and feel like a brand-new experience for today’s players. From my experience, I can say this game is truly unique and stands out from other slots. Its originality makes it so appealing because we always enjoy trying something new."
+              )}
             </p>
           </div>
-          <SectionHeader icon={statistics} text=" Alternatives to Plinko" />
+          <SectionHeader icon={statistics} text={t("Alternatives to Plinko")} />
           <div className="mx-auto my-10 p-5 w-full md:w-4/5">
             <p className="text-gray-600 mb-5">
-              In addition to the classic version of Plinko, there are many
-              exciting features worth trying:
+              {t(
+                "In addition to the classic version of Plinko, there are many exciting features worth trying:"
+              )}
             </p>
             <ul className="space-y-5">
               {plinkoAlternatives.map((alternative, index) => (
@@ -284,9 +235,9 @@ const SecondPart = () => {
                   className="p-5 border border-blue-300 rounded-lg bg-blue-50"
                 >
                   <h3 className="font-semibold text-xl text-blue-700 mb-3">
-                    {alternative.title}
+                    {t(alternative.title)}
                   </h3>
-                  <p className="text-gray-700">{alternative.description}</p>
+                  <p className="text-gray-700">{t(alternative.description)}</p>
                 </li>
               ))}
             </ul>
@@ -299,11 +250,11 @@ const SecondPart = () => {
           text={t("Gaming Technology and Safety")}
         />
         <div className="mx-auto my-10 p-5 w-full md:w-4/5">
-          {/* Gaming Technology and Safety Section */}
           <section className="mb-10">
             <p className="text-gray-600 mb-5">
-              Online platforms launch advanced technologies to ensure fairness,
-              transparency, and a comfortable gaming experience:
+              {t(
+                "Online platforms launch advanced technologies to ensure fairness, transparency, and a comfortable gaming experience:"
+              )}
             </p>
             <ul className="space-y-5">
               {gamingTechnology.map((tech, index) => (
@@ -312,9 +263,9 @@ const SecondPart = () => {
                   className="p-2 md:p-5 border border-green-300 rounded-lg bg-green-50"
                 >
                   <h3 className="font-semibold text-xl text-green-700 mb-3">
-                    {tech.title}
+                    {t(tech.title)}
                   </h3>
-                  <p className="text-gray-700">{tech.description}</p>
+                  <p className="text-gray-700">{t(tech.description)}</p>
                 </li>
               ))}
             </ul>
@@ -327,7 +278,7 @@ const SecondPart = () => {
         <div className="mx-auto my-10 p-5 w-full md:w-4/5">
           <section>
             <p className="text-gray-600 mb-5">
-              The casinos we recommend fully meet all these criteria:
+              {t("The casinos we recommend fully meet all these criteria:")}
             </p>
             <ul className="space-y-5">
               {reliableCasino.map((casino, index) => (
@@ -336,9 +287,9 @@ const SecondPart = () => {
                   className="p-5 border border-blue-300 rounded-lg bg-blue-50"
                 >
                   <h3 className="font-semibold text-xl text-blue-700 mb-3">
-                    {casino.title}
+                    {t(casino.title)}
                   </h3>
-                  <p className="text-gray-700">{casino.description}</p>
+                  <p className="text-gray-700">{t(casino.description)}</p>
                 </li>
               ))}
             </ul>
@@ -346,7 +297,7 @@ const SecondPart = () => {
         </div>
 
         <p className="text-[#2E3246] mt-[28px] font-bold text-xl">
-          The casinos we recommend fully meet all these criteria.
+          {t("The casinos we recommend fully meet all these criteria.")}
         </p>
       </div>
     </div>
