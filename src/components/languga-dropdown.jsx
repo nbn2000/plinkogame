@@ -49,11 +49,7 @@ const LangugaDropdown = ({ isMobile = false }) => {
           isMobile ? "justify-between w-full" : "justify-center"
         }  px-2 py-1 text-[16px] leading-4 font-normal`}
       >
-        <img
-          src={currentLanguage?.img}
-          alt={currentLanguage?.code}
-          className="w-5 h-5"
-        />
+        <img src={currentLanguage?.img} alt={currentLanguage?.code} />
         {currentLanguage?.label}
         <svg
           className={` transition-transform ${
