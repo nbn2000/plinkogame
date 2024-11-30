@@ -19,10 +19,6 @@ const MenuModal = ({ open }) => {
         <LinkButton to="/" className="md:hidden block !py-2 md:!py-2">
           {t("Play Now!")}
         </LinkButton>
-
-        <span className="text-[#7f8c8d] text-xs font-[400] leading-[1.45em]">
-          Copyright 2024 © plinkogame.cc
-        </span>
       </div>
     </div>
   );
