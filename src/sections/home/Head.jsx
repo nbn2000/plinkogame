@@ -5,6 +5,9 @@ import phone from "/src/assets/icons/phone.svg";
 import useLocales from "/src/hooks/useLocales";
 import Table from "./Table";
 import { Trans } from "react-i18next";
+import LinkButton from "/src/components/LinkButton";
+import plinkogame from "/src/assets/plinko-game.avif";
+import second from "/src/assets/second.avif";
 
 const ContentBlock = ({ icon, title, children }) => (
   <div className="my-6">
@@ -227,13 +230,11 @@ export default function Head() {
       </p>
       <Table />
 
-      <div className="flex justify-center items-center">
-        <button className="bg-gradient-to-r from-purple-600 to-pink-500 transition-all m-5 md:m-10 rounded-lg md:text-lg text-white px-3 md:px-10 py-4 md:py-6 tracking-wider font-roboto font-bold text-[12px] md:text-[14px] shadow-[2px_2px_29px_0_#F136A7]">
-          ⭐ {t("Play Plinko for Real Money!")} ⭐
-        </button>
+      <div className="flex justify-center items-center my-8 mb-12">
+        <LinkButton to="/">⭐ {t("Play Plinko for Real Money!")} ⭐</LinkButton>
       </div>
       <img
-        src="/images/first.jpg"
+        src={plinkogame}
         alt="Plinko gameplay"
         className="mx-auto rounded-xl"
       />
@@ -244,11 +245,7 @@ export default function Head() {
             "Plinko is a reimagined version of an ancient Japanese game originating in the 1930s in Nagoya. It gained true popularity after its debut on the television show The Price is Right. The essence of the game is as follows: a special board is studded with pegs that form a pyramid. From the top of this pyramid, a ball begins to fall, bouncing off the pegs and unpredictably changing its direction. The player watches as the ball falls, hoping it lands at the edge of the pyramid, thus bringing a significant win. Despite its simplicity, the game is full of excitement and unpredictability, making each ball drop a thrilling event."
           )}
         </p>
-        <img
-          src="/images/second.jpg"
-          alt="Plinko board"
-          className="mx-auto rounded-xl"
-        />
+        <img src={second} alt="Plinko board" className="mx-auto rounded-xl" />
       </ContentBlock>
 
       <ContentBlock
