@@ -45,9 +45,7 @@ const FooterUpper = () => {
       </div>
       <div className="flex justify-center w-full items-start gap-2">
         <p className="max-w-[450px] w-full text-center font-[400] text-[16px] leading-[23.2px] text-[#7F8C8D]">
-          {t(
-            "18+, For new customers only, T&Cs apply, Play responsibly. Copyright 2024 © plinkogame.cc"
-          )}
+          {t("18+, For new customers only, T&Cs apply, Play responsibly.")}
         </p>
       </div>
     </div>
@@ -55,10 +53,7 @@ const FooterUpper = () => {
 };
 
 const FooterDownSide = () => (
-  <div className="max-w-[1170px] mx-auto w-full flex justify-between items-center flex-wrap gap-3">
-    <span className="text-[#777777] font-[400] text-[12px] leading-[12px]">
-      Copyright 2024 © plinkogame.cc
-    </span>
+  <div className="max-w-[1170px] mx-auto w-full flex justify-end items-center flex-wrap gap-3">
     <div className="flex justify-center items-center gap-[20px]">
       <img src={only18} alt="18 +" />
       <img src={beGambleAware} alt="be aware of gamble" />
