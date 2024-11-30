@@ -9,7 +9,7 @@ import useLocales from "/src/hooks/useLocales";
 const emblems = [gamble, mga, kahnawake, curacao];
 
 const words = [
-  "RESPONSIBLE GAMBLING: At plinkogame.cc, we prioritize responsible gaming and urge our partners to follow suit. Our main objective is to ensure that online casino gaming stays a fun and worry-free experience. To maintain control and prevent potential financial concerns, we encourage taking breaks when needed.",
+  "Responsible Gaming Practice: On our website, we place a strong emphasis on a responsible approach to gaming and strongly encourage our partners to follow this principle. Our main goal is to ensure an engaging and safe experience for online casino players. To maintain control over the gaming process and avoid potential financial difficulties, we advise taking breaks when necessary.",
   "PLAY RESPONSIBLY: plinkogame.cc is an independent platform and is not directly associated with the websites we promote. Before participating in any gambling activities, it’s important to ensure you are complying with all relevant legal regulations. Please note that our content is provided for informational purposes only. By clicking on the links, you will be directed to external websites, and we do not take responsibility for any outcomes or consequences.",
 ];
 
