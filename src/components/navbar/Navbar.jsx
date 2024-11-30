@@ -25,16 +25,13 @@ const Navbar = () => {
         <Link to={"/"} className="w-max">
           <img src={Logo} alt="logo" className="w-full" />
         </Link>
-        <LinkButton to="/" className="md:hidden block !py-2 md:!py-2">
+        <LinkButton to="/" className=" !py-2 md:!py-2">
           {t("Play Now!")}
         </LinkButton>
         <div className="flex justify-center items-center gap-3">
           <div className="hidden md:block">
             <LangageDropDown />
           </div>
-          <LinkButton to="/" className="hidden md:block !py-2 md:!py-2">
-            {t("Play Now!")}
-          </LinkButton>
           <div className="relative md:hidden">
             <button
               className={`bg-primary w-max h-max p-1  text-black text-primary rounded-sm ${
