@@ -245,7 +245,7 @@ export default function Head() {
             "Plinko is a reimagined version of an ancient Japanese game originating in the 1930s in Nagoya. It gained true popularity after its debut on the television show The Price is Right. The essence of the game is as follows: a special board is studded with pegs that form a pyramid. From the top of this pyramid, a ball begins to fall, bouncing off the pegs and unpredictably changing its direction. The player watches as the ball falls, hoping it lands at the edge of the pyramid, thus bringing a significant win. Despite its simplicity, the game is full of excitement and unpredictability, making each ball drop a thrilling event."
           )}
         </p>
-        <img src={second} alt="Plinko board" className="mx-auto rounded-xl" />
+        <img src={second} alt="Plinko board" className="mx-auto rounded-xl max-h-screen" />
       </ContentBlock>
 
       <ContentBlock
