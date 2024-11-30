@@ -1,11 +1,12 @@
 import gift from "/src/assets/icons/gift.svg";
-import bowling from "/src/assets/bowling-game.jpg";
+import bowling from "/src/assets/bowling-game.avif";
 import lighning from "/src/assets/icons/yellow-lightning.svg";
 import gem from "/src/assets/icons/gem.svg";
 import statistics from "/src/assets/icons/statistics.svg";
 import settings from "/src/assets/icons/settings.svg";
 import trophy from "/src/assets/icons/trofee.svg";
 import useLocales from "/src/hooks/useLocales";
+import LinkButton from "/src/components/LinkButton";
 
 const tips = [
   {
@@ -140,11 +141,11 @@ const SecondPart = () => {
   const { t } = useLocales();
   return (
     <div className="mt-[51px] w-full px-4">
-      <div className="flex w-full justify-start items-center">
-        <button className=" bg-[#F136A7] hover:text-[#F136A7] gap-1 hover:bg-white flex justify-center items-center transition-all mx-auto m-10 rounded-[100px] text-lg text-white p-4 md:px-10 md:py-6 tracking-wider font-roboto  font-[700] text-[14px] leading-[20px] md:leading-[16px] shadow-[2px_2px_29px_0_#F136A7] ">
+      <div className="flex w-full justify-center items-center">
+        <LinkButton to="/">
           <img src={gift} alt="gift" /> {t("Best First Deposit Bonus")}
           <img src={gift} alt="gift" />
-        </button>
+        </LinkButton>
       </div>
       <img
         src={bowling}

@@ -1,6 +1,7 @@
-import { Link } from "react-router-dom";
 import useLocales from "/src/hooks/useLocales";
 import { Trans } from "react-i18next";
+
+// this page is not added to json excapt en.json rest has no translation
 
 const Paragraph = ({ children, className }) => (
   <p
@@ -41,72 +42,44 @@ const Head = () => {
     <div className="mt-[40px] mb-[60px] w-full px-4">
       <div className="max-w-[800px] w-full">
         <Paragraph className="mt-6">
-          <Trans
-            i18nKey={
-              "This Privacy Policy outlines the policies and procedures of <i>Plinkogames.cc</i> (“the Company”, “We”, “Us”, or “Our”) regarding the collection, use, and disclosure of your information when you use our Website and informs you about your privacy rights and protections."
-            }
-            components={{
-              i: <i />,
-              strong: <strong />,
-              Link: (
-                <Link
-                  className="font-medium !text-blue-600 dark:text-blue-500 hover:underline"
-                  to={"/"}
-                />
-              ),
-            }}
-          >
-            This Privacy Policy outlines the policies and procedures of
-            <i>Plinkogames.cc</i> (“the Company”, “We”, “Us”, or “Our”)
-            regarding the collection, use, and disclosure of your information
-            when you use our Website and informs you about your privacy rights
-            and protections.
-          </Trans>
-        </Paragraph>
-        <Paragraph className="mt-6">
           {t(
-            "By using our Website, you consent to the collection and use of information in accordance with this Privacy Policy."
+            "This Privacy Policy details how our company (“Company”, “We”, “Us”, or “Our”) collects, uses, and discloses your information when you use our website. It also clarifies your privacy rights and the steps we take to protect your personal information. By using our site, you consent to the collection, processing, and use of information as outlined in this Privacy Policy."
           )}
         </Paragraph>
-        <Heading level={3}>{t("Definitions and Interpretation")}</Heading>
-        <Heading level={4}>{t("Definitions")}</Heading>
+        <Heading level={4}>{t("Definitions and Terms")}</Heading>
         <ul className="list-disc list-inside flex flex-col gap-3 ml-4 mt-4">
           <ListItem
             title={t("Account:")}
             content={t(
-              `A unique profile created for you to access our Website or certain features.`
+              `A unique profile created for your access to the website or its features.`
             )}
           />
           <ListItem
             title={t("Affiliate:")}
             content={t(
-              "An entity that controls, is controlled by, or is under common control with the Company."
+              "Any organization that controls, is controlled by, or is under common control with the Company."
             )}
           />
           <ListItem
             title={t("Cookies:")}
             content={t(
-              "Small files placed on your device by a website, storing details about your browsing history and preferences."
+              "Small text files stored on your device that hold data about your preferences and activities."
             )}
-          />
-          <ListItem
-            title={t("Country refers to: ")}
-            content={t("United Kingdom")}
           />
           <ListItem
             title={t("Device:")}
             content={t(
-              "Any device, such as a computer, mobile phone, or tablet, that can access the Website."
+              "Any tool used to access the website, such as a computer, smartphone, or tablet."
             )}
           />
           <ListItem
             title={t("Personal Data:")}
-            content={t("Information relating to an identifiable individual.")}
+            content={t("Any information that can identify an individual.")}
           />
           <ListItem
             title={t("Service Provider:")}
             content={t(
-              "A third-party provider who processes data on behalf of the Company to facilitate or enhance the Service."
+              "A third-party organization that assists the Company in providing services, such as hosting, data analysis, or payment processing."
             )}
           />
           <ListItem
@@ -115,347 +88,176 @@ const Head = () => {
               "Data collected automatically about the use of the Website."
             )}
           />
-          <ListItem
-            title={t("Website: ")}
-            content={
-              <>
-                <Trans
-                  i18nKey={
-                    "Refers to Plinkogames.cc, accessible from <Link className='font-medium break-all text-blue-600 dark:text-blue-500 hover:underline' to={'/'} > http://plinkogame.cc/ </Link>"
-                  }
-                  components={{
-                    i: <i />,
-                    strong: <strong />,
-                    Link: (
-                      <Link
-                        className="font-medium !text-blue-600 dark:text-blue-500 hover:underline"
-                        to={"/"}
-                      />
-                    ),
-                  }}
-                >
-                  Refers to Plinkogames.cc, accessible from{" "}
-                  <Link
-                    className="font-medium break-all text-blue-600 dark:text-blue-500 hover:underline"
-                    to={"/"}
-                  >
-                    {" "}
-                    http://plinkogame.cc/{" "}
-                  </Link>
-                </Trans>
-              </>
-            }
-          />
-          <ListItem
-            title={t("You:")}
-            content={t(
-              "The individual using the Website or a company/legal entity on whose behalf the Website is accessed."
-            )}
-          />
         </ul>
 
-        <Heading level={3}>{t("Collection and Use of Personal Data")}</Heading>
-        <Heading level={4}>{t("Types of Data Collected")}</Heading>
-        <ol className="list-decimal mt-5 ml-8">
+        <Heading level={4}>
+          {t("Data Collection and Use Types of Data Collected")}
+        </Heading>
+        <ul className="list-disc mt-5 ml-8">
           <ListItem
             title={t("Personal Data")}
             content={t(
-              "We may collect personally identifiable information, such as your email address, which allows us to contact or identify you."
+              "We may collect data such as your name, email address, phone number, and other information you provide during registration or interaction with the site."
             )}
           />
           <ListItem
             title={t("Usage Data")}
-            content={t(
-              "Usage Data is collected automatically and may include details like your device’s IP address, browser type and version, pages visited, date and time of visit, time spent on pages, unique device identifiers, and diagnostic data."
-            )}
-          />
-          <ListItem
-            title={t("Tracking Technologies and Cookies")}
-            content={t(
-              "We use Cookies and similar tracking technologies to analyze user activity on our Website. These technologies include:"
-            )}
+            content={t("This data is collected automatically and may include:")}
           />
           <ul className="list-disc list-inside flex flex-col gap-3 ml-4 mt-4">
+            <ListItem title={""} content={t("Device IP address")} />
+            <ListItem title={""} content={t("Browser type and version")} />
+            <ListItem title={""} content={t("Pages you visit")} />
+            <ListItem title={""} content={t("Visit date and time")} />
+            <ListItem title={""} content={t("Time spent on pages")} />
             <ListItem
-              title={t("Cookies or Browser Cookies: ")}
-              content={t(
-                "Small files stored on your device, which can be adjusted via your browser settings."
-              )}
+              title={""}
+              content={
+                <>
+                  <Trans
+                    i18nKey={
+                      "Unique device identifiers <strong>Tracking Technologies</strong> We use cookies and similar technologies to analyze user activity. These include:"
+                    }
+                    components={{
+                      strong: <strong />,
+                    }}
+                  >
+                    Unique device identifiers
+                    <strong>Tracking Technologies</strong> We use cookies and
+                    similar technologies to analyze user activity. These
+                    include:
+                  </Trans>
+                </>
+              }
             />
-            <ListItem
-              title={t("Web Beacons: ")}
-              content={t(
-                "Small electronic files used in some areas of our Website and emails to gather statistics on page visits and email responses."
-              )}
-            />
+            <ul className="list-disc list-inside flex flex-col gap-3 ml-4 mt-4">
+              <ListItem
+                title={t("Session Cookies:")}
+                content={t("Deleted after you close your browser.")}
+              />
+              <ListItem
+                title={t("Persistent Cookies:")}
+                content={t("Remain on your device to enhance user experience.")}
+              />
+              <ListItem
+                title={t("Web Beacons:")}
+                content={t(
+                  "Electronic files used to collect visit statistics and track interactions."
+                )}
+              />
+            </ul>
           </ul>
-        </ol>
-        <Paragraph className="mt-4 *:text-[#2E3246] ml-8">
-          <Trans
-            i18nKey={
-              "We use <strong> Session Cookies </strong> (deleted after closing the browser) and <strong> Persistent Cookies </strong> for various purposes:"
-            }
-            components={{
-              i: <i />,
-              strong: <strong />,
-              Link: (
-                <Link
-                  className="font-medium !text-blue-600 dark:text-blue-500 hover:underline"
-                  to={"/"}
-                />
-              ),
-            }}
-          >
-            We use <strong> Session Cookies </strong> (deleted after closing the
-            browser) and <strong> Persistent Cookies </strong> for various
-            purposes:
-          </Trans>
-        </Paragraph>
+        </ul>
+        <Heading level={4}>
+          {t("Purposes of Data Processing We process your data to:")}
+        </Heading>
         <ul className="list-disc list-inside flex flex-col gap-3 ml-10 mt-4">
           <ListItem
-            title={t("Necessary Cookies: ")}
-            content={t("Enable essential functions and security.")}
+            title={t("Provide Services:")}
+            content={t("Support website operation and functionality.")}
           />
           <ListItem
-            title={t("Acceptance Cookies: ")}
+            title={t("Manage Accounts:")}
+            content={t("Keep track of your registration and profile settings.")}
+          />
+          <ListItem
+            title={t("Support Users:")}
             content={t(
-              "Identify whether users have consented to cookie usage."
+              "Promptly respond to inquiries and provide technical assistance."
             )}
           />
           <ListItem
-            title={t("Functionality Cookies: ")}
+            title={t("Communications:")}
             content={t(
-              "Remember choices you make, like language or login preferences, to enhance user experience."
+              "Inform you about site changes, new features, or services."
             )}
+          />
+          <ListItem
+            title={t("Marketing:")}
+            content={t(
+              "Provide information about products and offers, unless you opt out."
+            )}
+          />
+          <ListItem
+            title={t("Analysis and Improvement:")}
+            content={t("Optimize the site and enhance service quality.")}
           />
         </ul>
-        <Paragraph className="mt-4">
-          {t("For more information, please refer to our Cookies Policy.")}
-        </Paragraph>
 
-        <Heading level={3}>{t("Purpose of Using Personal Data")}</Heading>
-        <Paragraph className="mt-4">
-          {t(
-            "The Company may use your Personal Data for the following reasons:"
-          )}
-        </Paragraph>
-        <ul className="list-disc list-inside flex flex-col gap-3 ml-4 mt-4">
+        <Heading level={4}>
+          {t("Data Sharing We may share your data with:")}
+        </Heading>
+        <ul className="list-disc list-inside flex flex-col gap-3 ml-10 mt-4">
           <ListItem
-            title={t("Service Provision:")}
+            title={t("Service Providers:")}
             content={t(
-              "To operate, maintain, and secure our Website and its features."
+              "For data processing, hosting, analytics, and other tasks."
             )}
           />
           <ListItem
-            title={t("Account Management: ")}
-            content={t("To manage your registration and account information.")}
-          />
-          <ListItem
-            title={t("Customer Support: ")}
-            content={t("To provide customer service and respond to inquiries.")}
-          />
-          <ListItem
-            title={t("Communications: ")}
-            content={t(
-              "To send updates or notifications related to the Website, products, and services."
-            )}
-          />
-          <ListItem
-            title={t("Marketing: ")}
-            content={t(
-              "To inform you about similar products and offers, provided you have not opted out of such communications."
-            )}
-          />
-          <ListItem
-            title={t("Business Operations: ")}
-            content={t(
-              "To analyze and improve Website performance, products, and services."
-            )}
-          />
-        </ul>
-        <Heading level={3}>{t("Learn More About Cookies")}</Heading>
-        <Paragraph className="mt-4">
-          <Trans
-            i18nKey={
-              "To gain more knowledge about cookies in general, you may want to visit an informational site on “ <Link className='font-medium !text-blue-600 dark:text-blue-500 hover:underline' to={'/'} > What Are Cookies? </Link> ”."
-            }
-            components={{
-              i: <i />,
-              strong: <strong />,
-              Link: (
-                <Link
-                  className="font-medium !text-blue-600 dark:text-blue-500 hover:underline"
-                  to={"/"}
-                />
-              ),
-            }}
-          >
-            To gain more knowledge about cookies in general, you may want to
-            visit an informational site on “{" "}
-            <Link
-              className="font-medium !text-blue-600 dark:text-blue-500 hover:underline"
-              to={"/"}
-            >
-              {" "}
-              What Are Cookies?{" "}
-            </Link>{" "}
-            ”.
-          </Trans>
-        </Paragraph>
-        <Heading level={3}>{t("Sharing of Personal Data")}</Heading>
-        <Paragraph className="mt-4">
-          {t("Your data may be shared in the following situations:")}
-        </Paragraph>
-        <ul className="list-disc list-inside flex flex-col gap-3 ml-4 mt-4">
-          <ListItem
-            title={t("With Service Providers: ")}
-            content={t(
-              "To support our Website operations and communication with users."
-            )}
-          />
-          <ListItem
-            title={t("For Business Transfers:")}
-            content={t(
-              "In the event of a merger, acquisition, or asset sale, user data may be transferred."
-            )}
+            title={t("During Business Transfers:")}
+            content={t("If the Company is reorganized, merged, or sold.")}
           />
           <ListItem
             title={t("With Affiliates:")}
+            content={t("To offer related services or promotions.")}
+          />
+          <ListItem
+            title={t("With Business Partners:")}
+            content={t("As part of product promotions or campaigns.")}
+          />
+          <ListItem
+            title={t("With Your Consent:")}
+            content={t("If you authorize a specific use of data.")}
+          />
+        </ul>
+        <Heading level={4}>{t("Data Storage and Transfer")}</Heading>
+        <ul className="list-disc list-inside flex flex-col gap-3 ml-10 mt-4">
+          <ListItem
+            title={t("Retention Period:")}
             content={t(
-              "We may share your information with affiliates, who are bound by this Privacy Policy."
+              "We store your data only as long as necessary for the purposes stated in this policy or as required by law."
             )}
           />
           <ListItem
-            title={t("With Business Partners: ")}
-            content={t("To offer certain products, services, or promotions.")}
-          />
-          <ListItem
-            title={t("With Other Users:")}
+            title={t("Data Transfer:")}
             content={t(
-              "Information you choose to share publicly on the Website may be accessible to other users."
-            )}
-          />
-          <ListItem
-            title={t("With Your Consent: ")}
-            content={t(
-              "We may share your data for other purposes if you consent."
+              "Your data may be processed on servers located outside your jurisdiction. We take measures to protect it."
             )}
           />
         </ul>
-        <Heading level={3}>{t("Data Retention")}</Heading>
-        <Paragraph className="mt-4">
-          {t(
-            "We retain your Personal Data only as long as necessary to fulfill the purposes outlined in this Privacy Policy or as legally required. Usage Data, used for performance and security improvements, is kept for shorter periods unless otherwise needed for these purposes."
-          )}
-        </Paragraph>
-        <Heading level={3}>{t("Data Transfer")}</Heading>
-        <Paragraph className="mt-4">
-          {t(
-            "Your data may be transferred to computers outside your jurisdiction with varying data protection standards. By submitting your information, you consent to such transfers, and we will take steps to ensure the secure treatment of your data."
-          )}
-        </Paragraph>
-        <Heading level={3}>{t("Deletion of Personal Data")}</Heading>
-        <Paragraph className="mt-4">
-          {t(
-            "You may request the deletion of your data by managing your account settings or contacting us directly. However, we may retain data as required by law or for legitimate purposes."
-          )}
-        </Paragraph>
-        <Heading level={3}>{t("Disclosure of Personal Data")}</Heading>
-        <ol className="list-decimal mt-5 ml-8">
-          <ListItem
-            title={t("Business Transactions:")}
-            content={t(
-              "In the event of a merger or asset transfer, your data may be transferred, with advance notice of any change in this Privacy Policy."
+        <div className="space-y-6 my-7">
+          <Paragraph className="mt-4">
+            {t(
+              "Deletion of Personal Data You can request the deletion of your data by contacting us or adjusting your account settings. Note that some data may be retained as required by law."
             )}
-          />
-          <ListItem
-            title={t("Law Enforcement: ")}
-            content={t(
-              "Personal Data may be disclosed when required by law or in response to lawful government requests."
+          </Paragraph>
+          <Paragraph className="mt-4">
+            {t(
+              "Data Security We use modern technical and organizational measures to protect your data, but no data transmission or storage method is completely secure."
             )}
-          />
-          <ListItem
-            title={t("Other Legal Requirements:")}
-            content={t(
-              "Disclosure may be necessary to protect Company assets, investigate potential issues, or safeguard public safety."
+          </Paragraph>
+          <Paragraph className="mt-4">
+            {t(
+              "Children's Privacy Our website is not intended for users under 18. We do not knowingly collect data from minors and will delete such information if provided."
             )}
-          />
-        </ol>
-        <Heading level={3}>{t("Data Security")}</Heading>
-        <Paragraph className="mt-4">
-          {t(
-            "We prioritize the security of your Personal Data but acknowledge that no online or electronic transmission is entirely secure. While we strive to use commercially acceptable practices, we cannot guarantee absolute security."
-          )}
-        </Paragraph>
-        <Heading level={3}>{t("Children’s Privacy")}</Heading>
-
-        <Paragraph className="mt-4">
-          {t(
-            "Our Website is not intended for children under the age of 18, and we do not knowingly collect data from minors. If we learn that we have collected such data, we will promptly delete it. If parental consent is legally required, we may request such consent prior to processing a minor’s data."
-          )}
-        </Paragraph>
-        <Heading level={3}>{t("External Links")}</Heading>
-        <Paragraph className="mt-4">
-          {t(
-            "Our Website may contain links to third-party sites. We recommend reviewing the privacy policies of these sites, as we hold no responsibility for their practices."
-          )}
-        </Paragraph>
-        <Heading level={3}>{t("Policy Updates")}</Heading>
-        <Paragraph className="mt-4">
-          {t(
-            "We may revise this Privacy Policy periodically. Any changes will be posted on this page, with notice provided as appropriate. By continuing to use the Website, you accept the revised policy terms."
-          )}
-        </Paragraph>
-        <Heading level={3}>{t("Contact Us")}</Heading>
-
-        <Paragraph className="mt-4">
-          <Trans
-            i18nKey={
-              "For questions about this Privacy Policy, please reach out via our <Link className='font-medium text-blue-600 dark:text-blue-500 hover:underline' to={'/'} > Contact Us </Link> page."
-            }
-            components={{
-              i: <i />,
-              strong: <strong />,
-              Link: (
-                <Link
-                  className="font-medium !text-blue-600 dark:text-blue-500 hover:underline"
-                  to={"/"}
-                />
-              ),
-            }}
-          >
-            For questions about this Privacy Policy, please reach out via our{" "}
-            <Link
-              className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-              to={"/"}
-            >
-              {" "}
-              Contact Us{" "}
-            </Link>{" "}
-            page.
-          </Trans>
-        </Paragraph>
-        <hr className="w-full h-[1px] text-[#ccc] bg-[#ccc] my-10" />
-        <Paragraph className="mt-4">
-          <Trans
-            i18nKey={
-              "This adaptation aligns with <i>Plinkogames.cc</i> and includes essential details to ensure comprehensive coverage."
-            }
-            components={{
-              i: <i />,
-              strong: <strong />,
-              Link: (
-                <Link
-                  className="font-medium !text-blue-600 dark:text-blue-500 hover:underline"
-                  to={"/"}
-                />
-              ),
-            }}
-          >
-            This adaptation aligns with <i>Plinkogames.cc</i> and includes
-            essential details to ensure comprehensive coverage.
-          </Trans>
-        </Paragraph>
+          </Paragraph>
+          <Paragraph className="mt-4">
+            {t(
+              "Third-Party Site Links Our website may include links to third-party resources. We are not responsible for their privacy practices and recommend reviewing their policies."
+            )}
+          </Paragraph>
+          <Paragraph className="mt-4">
+            {t(
+              "Changes to Privacy Policy We may update this policy. All changes will be posted on this page, and continuing to use the site after updates signifies agreement to the new terms."
+            )}
+          </Paragraph>
+          <Paragraph className="mt-8">
+            {t(
+              "Contact Us If you have questions or comments about this Privacy Policy, please contact us via the  “Contact Us” page on our website."
+            )}
+          </Paragraph>
+        </div>
       </div>
     </div>
   );

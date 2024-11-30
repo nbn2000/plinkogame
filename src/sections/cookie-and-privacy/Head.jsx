@@ -147,7 +147,7 @@ const Head = () => {
               Link: (
                 <Link
                   className="font-medium !text-blue-600 dark:text-blue-500 hover:underline"
-                  to={"/"}
+                  to={"/contact-us"}
                 />
               ),
             }}
@@ -156,7 +156,7 @@ const Head = () => {
             you can contact us through the “
             <Link
               className="font-medium !text-blue-600 dark:text-blue-500 hover:underline"
-              to={"/"}
+              to={"/contact-us"}
             >
               Contact Us
             </Link>
