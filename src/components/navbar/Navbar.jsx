@@ -22,7 +22,7 @@ const Navbar = () => {
   return (
     <nav className="w-full h-[80px] fixed bg-white top-0 left-0  shadow-[0_10px_40px_0_rgba(109,141,173,0.25)]">
       <div className="mx-auto px-4 flex flex-row h-full  justify-between items-center gap-4  max-w-[1400px]">
-        <Link to={"/"} className="w-max">
+        <Link to={"/"} className="w-max max-w-[150px]">
           <img src={Logo} alt="logo" className="w-full" />
         </Link>
         <LinkButton to="/" className=" !py-2 md:!py-2">
