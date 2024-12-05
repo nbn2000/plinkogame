@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import ReviewForm from "../../components/ReviewForm";
 import dude from "/src/assets/avatar.jpg";
 import useLocales from "/src/hooks/useLocales";
 import { db } from "../../lib/firebase-connect";
 import { collection, getDocs } from "firebase/firestore"; // Import required methods
 import ReviewCard from "../../components/ReviewCard";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Import FontAwesomeIcon
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 
@@ -14,6 +13,7 @@ library.add(fas);
 const LastOne = () => {
   const { t } = useLocales();
   const [reviews, setReviews] = useState([]);
+  const [rerender, setRerender] = useState(false);
 
   useEffect(() => {
     const fetchReviews = async () => {
@@ -27,7 +27,11 @@ const LastOne = () => {
     };
 
     fetchReviews();
-  }, []);
+  }, [rerender]);
+
+  const reFetch = () => {
+    setRerender(!rerender);
+  };
 
   return (
     <div>
@@ -48,7 +52,7 @@ const LastOne = () => {
         </div>
       </div>
       <div className="max-w-[70%] mx-auto">
-        <ReviewForm />
+        <ReviewForm reFetch={reFetch} />
       </div>
       <div>
         <div className="reviews-container overflow-x-auto flex flex-nowrap container">
