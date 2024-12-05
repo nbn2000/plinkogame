@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { db } from "../lib/firebase-connect";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore"; // Import required methods
 
-function ReviewForm() {
+function ReviewForm({ reFetch }) {
   const [email, setEmail] = useState("");
   const [fullName, setFullName] = useState("");
   const [review, setReview] = useState("");
@@ -29,6 +29,7 @@ function ReviewForm() {
       setFullName("");
       setReview("");
       setRating(0);
+      reFetch();
     } catch (error) {
       console.error("Error submitting review:", error);
     }
