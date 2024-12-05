@@ -3,6 +3,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.rating {
+  display: inline-block; /* Make the stars display in a row */
+  font-size: 20px; /* Adjust the size as needed */
+  color: gold; /* Set the color for filled stars */
+}
+.container::-webkit-scrollbar {
+  height: 12px;
+}
+
+.container::-webkit-scrollbar-track {
+  background-color: rgb(248, 14, 236);
+  border-radius: 12px;
+}
+
+.container::-webkit-scrollbar-thumb {
+  background-color: rgb(31, 125, 2);
+  border-radius: 12px;
+}
+
+.rating .empty {
+  color: #ccc; /* Set the color for empty stars */
+}
+.reviews-container {
+  /* ... other styles */
+  flex-wrap: nowrap; /* Prevent cards from wrapping */
+  gap: 10px; /* Add spacing between cards */
+}
 
 :root {
   --color-dark: #000000;
