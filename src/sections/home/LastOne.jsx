@@ -23,6 +23,7 @@ const LastOne = () => {
         id: doc.id,
         ...doc.data(),
       }));
+      console.log(fetchedReviews);
       setReviews(fetchedReviews);
     };
 
@@ -56,9 +57,12 @@ const LastOne = () => {
       </div>
       <div>
         <div className="reviews-container overflow-x-auto flex flex-nowrap container">
-          {reviews.map((review) => (
-            <ReviewCard key={review.id} reviewData={review} />
-          ))}
+          {reviews.map(
+            (review) =>
+              review.hasModerated && (
+                <ReviewCard key={review.id} reviewData={review} />
+              )
+          )}
         </div>
       </div>
     </div>
